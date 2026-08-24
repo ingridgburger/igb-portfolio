@@ -1,0 +1,24 @@
+.skills-bar {
+  overflow: hidden;
+  width: 1000px;
+  margin: 0 auto;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+}
+
+.skills-bar__track {
+  display: flex;
+  gap: var(--space-1);
+  width: max-content;
+  animation: scroll-skills 30s linear infinite;
+}
+
+@keyframes scroll-skills {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}

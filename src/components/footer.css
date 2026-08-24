@@ -1,0 +1,33 @@
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-5);
+}
+
+.site-footer--dark {
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+.site-footer--light {
+  background: var(--color-light);
+  color: var(--color-dark);
+}
+
+.site-footer__left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.site-footer__mark {
+  font-family: var(--font-logo);
+  font-size: 16px;
+}
+
+.site-footer__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-7);
+}

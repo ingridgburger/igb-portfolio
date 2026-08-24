@@ -1,0 +1,10 @@
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-7);
+}
+
+.nav-links__item {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,23 @@
+.skill-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: 30px;
+  padding: 0 var(--space-1);
+  border: 0.5px solid var(--color-foreground);
+  border-radius: 10px;
+  width: max-content;
+  flex-shrink: 0;
+}
+
+.skill-badge__icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.skill-badge__name {
+  font-family: var(--font-body);
+  font-size: 14px;
+  white-space: nowrap;
+}

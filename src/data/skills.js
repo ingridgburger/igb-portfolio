@@ -1,0 +1,16 @@
+export const skills = [
+  { name: 'Figma', slug: 'figma' },
+  { name: 'Framer', slug: 'framer' },
+  { name: 'Adobe Creative Suite', slug: 'adobe' },
+  { name: 'React', slug: 'react' },
+  { name: 'TypeScript', slug: 'typescript' },
+  { name: 'JavaScript', slug: 'javascript' },
+  { name: 'HTML', slug: 'html' },
+  { name: 'CSS', slug: 'css' },
+  { name: 'Storybook', slug: 'storybook' },
+  { name: 'GraphQL', slug: 'graphql' },
+  { name: 'GitHub', slug: 'github' },
+  { name: 'PHP', slug: 'php' },
+  { name: 'MySQL', slug: 'mysql' },
+  { name: 'Google Analytics & Search Console', slug: 'google' },
+];

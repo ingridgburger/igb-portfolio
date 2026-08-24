@@ -1,0 +1,30 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-5);
+  background: var(--color-background);
+  color: var(--color-foreground);
+  z-index: 10;
+  position: relative;
+}
+
+.site-header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.site-header__mark {
+  font-family: var(--font-logo);
+  font-size: 16px;
+}
+
+.site-header__name {
+  margin-left: var(--space-2);
+}
+
+.site-header__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-7);
+}
