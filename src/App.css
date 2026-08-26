@@ -7,3 +7,12 @@
 .app__content {
   flex: 1;
 }
+
+.app__placeholder {
+  min-height: 56vh;
+  padding: var(--space-6) var(--mobile-side-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

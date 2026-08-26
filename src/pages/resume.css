@@ -1,0 +1,275 @@
+.resume-page {
+	padding: var(--space-5);
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.resume-page__header {
+	margin-bottom: var(--space-4);
+}
+
+.resume-page__title {
+	margin: 0;
+	font-size: 32px;
+	font-family: var(--font-body);
+	font-weight: 400;
+	line-height: 1.1;
+}
+
+.resume-page__title-name {
+	font-weight: 700;
+}
+
+.resume-page__title-location {
+	font-weight: 400;
+}
+
+.resume-page__accordion {
+	border-top: 1px solid color-mix(in srgb, var(--color-foreground), transparent);
+}
+
+.resume__section {
+	border-bottom: 1px solid color-mix(in srgb, var(--color-foreground), transparent);
+}
+
+.resume__section-title {
+	margin: 0;
+}
+
+.resume__trigger {
+	width: 100%;
+	border: 0;
+	background: transparent;
+	color: inherit;
+	padding: var(--space-3) 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-align: left;
+	cursor: pointer;
+	font-family: var(--font-body);
+	font-weight: 700;
+}
+
+.resume__plus {
+	width: 18px;
+	height: 18px;
+	position: relative;
+	flex-shrink: 0;
+}
+
+.resume__plus::before,
+.resume__plus::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 8px;
+	height: 2px;
+	background: currentColor;
+	border-radius: 2px;
+	transition: transform 220ms ease;
+}
+
+.resume__plus::after {
+	transform: rotate(90deg);
+}
+
+.resume__section.is-open .resume__plus::after {
+	transform: rotate(0deg);
+}
+
+.resume__panel {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows 280ms ease;
+}
+
+.resume__section.is-open .resume__panel {
+	grid-template-rows: 1fr;
+}
+
+.resume__panel-inner {
+	min-height: 0;
+	overflow: hidden;
+	padding-bottom: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 220ms ease, visibility 220ms ease, padding-bottom 220ms ease;
+}
+
+.resume__section.is-open .resume__panel-inner {
+	padding-bottom: var(--space-4);
+	opacity: 1;
+	visibility: visible;
+}
+
+.resume__entry-title,
+.resume__job-company,
+.resume__job-role,
+.resume__job-location,
+.resume__job-dates,
+.resume__skill-line,
+.resume__list,
+.resume__subheading {
+	font-family: var(--font-body);
+}
+
+.resume__entry-title,
+.resume__job-company {
+	margin: 0;
+	font-weight: 700;
+	font-size: 16px;
+}
+
+.resume__entry-subtitle,
+.resume__job-role,
+.resume__job-location,
+.resume__job-dates,
+.resume__skill-line {
+	margin: var(--space-1) 0 0;
+	font-size: 16px;
+	line-height: 1.45;
+	font-weight: 400;
+}
+
+.resume__job-dates {
+	font-style: italic;
+}
+
+.resume__subheading {
+	margin: var(--space-3) 0 var(--space-1);
+}
+
+.resume__list {
+	margin: var(--space-1) 0 0;
+	padding-left: 20px;
+	display: grid;
+	gap: 8px;
+	line-height: 1.45;
+}
+
+.resume__list--columns {
+	column-gap: var(--space-5);
+}
+
+.resume__experience-stack {
+	display: grid;
+	gap: var(--space-4);
+}
+
+.resume__job {
+	padding-top: var(--space-2);
+	border-top: 1px dashed color-mix(in srgb, var(--color-foreground) 22%, transparent);
+}
+
+.resume__job:first-child {
+	border-top: 0;
+	padding-top: 0;
+}
+
+.resume__job-head {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	gap: 4px 16px;
+	align-items: baseline;
+}
+
+.resume__job-title-line {
+	display: flex;
+	align-items: baseline;
+	flex-wrap: wrap;
+	gap: 0;
+}
+
+.resume__job-company,
+.resume__job-role {
+	font-size: 16px;
+	line-height: 1.45;
+}
+
+.resume__job-company {
+	font-weight: 700;
+}
+
+.resume__job-title-separator {
+	display: inline-block;
+	width: 5ch;
+	flex: 0 0 auto;
+}
+
+.resume__job-role,
+.resume__job-location {
+	margin: 0;
+}
+
+.resume__job-location {
+	justify-self: end;
+	text-align: right;
+	white-space: nowrap;
+}
+
+.resume__skills-stack {
+	display: grid;
+	gap: var(--space-2);
+}
+
+@media (max-width: 900px) {
+	.resume-page {
+		padding: var(--space-3) var(--mobile-side-padding) var(--space-5);
+	}
+
+	.resume-page__header {
+		margin-bottom: var(--space-3);
+	}
+
+	.resume-page__title {
+		font-size: 20px;
+	}
+
+	.resume__trigger {
+		padding: var(--space-2) 0;
+		font-size: 14px;
+	}
+
+	.resume__entry-title,
+	.resume__job-company {
+		font-size: 16px;
+	}
+
+	.resume__job-title-line {
+		flex-direction: column;
+		gap: 2px;
+	}
+
+	.resume__job-head {
+		grid-template-columns: 1fr;
+		gap: 2px;
+	}
+
+	.resume__job-title-separator {
+		display: none;
+	}
+
+	.resume__job-location {
+		margin-left: 0;
+		text-align: left;
+	}
+
+	.resume__job-dates {
+		font-style: italic;
+	}
+
+	.resume__entry-subtitle,
+	.resume__job-role,
+	.resume__job-location,
+	.resume__job-dates,
+	.resume__skill-line,
+	.resume__list {
+		font-size: 14px;
+	}
+
+	.resume__subheading {
+		font-size: 13px;
+	}
+}

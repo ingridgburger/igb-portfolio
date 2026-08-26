@@ -7,4 +7,19 @@
 .nav-links__item {
   text-decoration: none;
   color: inherit;
+  font-size: 14px;
+  transition: text-shadow 180ms ease;
+}
+
+.nav-links__item:hover,
+.nav-links__item:focus-visible {
+  text-shadow: 0 1px 6px color-mix(in srgb, currentColor 30%, transparent);
+}
+
+.nav-links--mobile {
+  margin-top: clamp(72px, 16vh, 140px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(36px, 8vh, 62px);
 }

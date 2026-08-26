@@ -7,11 +7,18 @@ const links = [
   { label: 'ABOUT ME', href: '/about' },
 ];
 
-export default function NavLinks() {
+export default function NavLinks({ className = '', includeHome = false, onNavigate }) {
+  const allLinks = includeHome ? [{ label: 'HOME', href: '/' }, ...links] : links;
+
   return (
-    <nav className="nav-links">
-      {links.map((link) => (
-        <a key={link.href} href={link.href} className="text-h3 nav-links__item">
+    <nav className={`nav-links ${className}`.trim()}>
+      {allLinks.map((link) => (
+        <a
+          key={link.href}
+          href={link.href}
+          className="text-h3 nav-links__item"
+          onClick={onNavigate}
+        >
           {link.label}
         </a>
       ))}

@@ -21,7 +21,7 @@
 
 @font-face {
   font-family: "DM Sans";
-  src: url("./assets/fonts/dm-sans-italic.ttf") format("truetype");
+  src: url("./assets/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz\,wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: italic;
 }
@@ -57,11 +57,24 @@
   --mobile-side-padding: var(--space-3);
 
   --shadow-light: 0px 0px 20px rgba(26, 26, 26, 0.4);
+
+  --hero-shadow-small: 0 0 20px rgba(26, 26, 26, 0.4);
+  --hero-shadow-medium: 0 0 70px rgba(255, 250, 242, 1);
+  --hero-shadow-large: 0 0 100px rgba(255, 250, 242, 1);
+  --hero-shadow-xlarge: 0 0 240px rgba(255, 250, 242, 1);
+  --scroll-shadow-color: rgba(26, 26, 26, 0.22);
 }
 
 [data-theme="dark"] {
   --color-background: var(--color-dark);
   --color-foreground: var(--color-light);
+
+  /* Invert glow balance in dark mode: small glow light, larger glows dark. */
+  --hero-shadow-small: 0 0 20px rgba(255, 255, 255, 0.55);
+  --hero-shadow-medium: 0 0 70px rgba(0, 0, 0, 0.55);
+  --hero-shadow-large: 0 0 100px rgba(0, 0, 0, 0.7);
+  --hero-shadow-xlarge: 0 0 240px rgba(0, 0, 0, 0.85);
+  --scroll-shadow-color: rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -80,6 +93,7 @@ body {
   background: var(--color-background);
   color: var(--color-foreground);
   margin: 0;
+  overflow-x: hidden;
 }
 
 /* Typography */

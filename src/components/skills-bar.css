@@ -1,6 +1,6 @@
 .skills-bar {
   overflow: hidden;
-  width: 1000px;
+  width: 100vw;
   margin: 0 auto;
   mask-image: linear-gradient(
     to right,
@@ -16,6 +16,19 @@
   gap: var(--space-1);
   width: max-content;
   animation: scroll-skills 30s linear infinite;
+}
+
+@media (max-width: 900px) {
+  .skills-bar {
+    width: 100%;
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
+  }
 }
 
 @keyframes scroll-skills {
