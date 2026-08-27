@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { useTheme } from '../context/theme-context';
+import newTabIconLight from '../assets/images/icons/new-tab-icon-light.png';
+import newTabIconDark from '../assets/images/icons/new-tab-icon-dark.png';
 import './resume.css';
 
 const EDUCATION_POINTS = [
@@ -97,7 +100,7 @@ function ResumeSection({ id, title, isOpen, onToggle, children }) {
 		<section className={`resume__section ${isOpen ? 'is-open' : ''}`}>
 			<h2 className="resume__section-title">
 				<button
-					className="resume__trigger text-h2"
+					className="resume__trigger text-h3"
 					onClick={() => onToggle(id)}
 					aria-expanded={isOpen}
 					aria-controls={`resume-panel-${id}`}
@@ -122,6 +125,8 @@ function ResumeSection({ id, title, isOpen, onToggle, children }) {
 
 export default function ResumePage() {
 	const [openSectionId, setOpenSectionId] = useState('');
+	const { theme } = useTheme();
+	const newTabIcon = theme === 'light' ? newTabIconLight : newTabIconDark;
 
 	const toggleSection = (id) => {
 		setOpenSectionId((current) => (current === id ? '' : id));
@@ -130,10 +135,19 @@ export default function ResumePage() {
 	return (
 		<section className="resume-page">
 			<header className="resume-page__header">
-				<h1 className="resume-page__title text-h1">
-					<span className="resume-page__title-name">INGRID BURGER</span>{' '}
-					<span className="resume-page__title-location">⚲ Philadelphia, PA</span>
+				<h1 className="resume-page__title">
+					<span className="resume-page__title-name text-h1">INGRID BURGER</span>{' '}
+					<span className="resume-page__title-location text-h1--unbold">⚲ Philadelphia, PA</span>
 				</h1>
+				<a
+					className="resume-page__pdf-button button-standard text-h4"
+					href="https://example.com"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<span>View as PDF</span>
+					<img src={newTabIcon} alt="" aria-hidden="true" />
+				</a>
 			</header>
 
 			<div className="resume-page__accordion">

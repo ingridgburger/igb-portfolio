@@ -67,12 +67,12 @@ export default function HomePage() {
 				Designing thoughtful experiences from concept to code.
 			</p>
 
-			<div className="hero__images">
-				<HeroImages />
+            <div className="hero__skills">
+				<SkillsBar />
 			</div>
 
-			<div className="hero__skills">
-				<SkillsBar />
+			<div className="hero__images">
+				<HeroImages />
 			</div>
 		</section>
 	);

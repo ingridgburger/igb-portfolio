@@ -18,6 +18,9 @@
 
 .skill-badge__name {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 12px;
   white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 10%;
 }

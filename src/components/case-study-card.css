@@ -1,0 +1,134 @@
+.case-study-card {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: var(--color-background);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--color-foreground) 24%, transparent);
+  overflow: hidden;
+  min-height: 340px;
+  padding-bottom: 24px;
+}
+
+.case-study-card__category {
+  margin: 16px 16px 0;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  padding: 4px var(--space-1);
+  border: 0.5px solid var(--color-foreground);
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.case-study-card__content {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 58px 0 16px;
+}
+
+.case-study-card__skills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.case-study-card__skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-study-card__skill-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.case-study-card__image {
+  width: 100%;
+  max-width: 420px;
+  justify-self: center;
+  object-fit: contain;
+  display: block;
+}
+
+.case-study-card__meta {
+  padding: 10px 58px 20px;
+  text-align: center;
+}
+
+.case-study-card__title {
+  margin: 0;
+}
+
+.case-study-card__role {
+  margin: 6px 0 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+}
+
+.case-study-card__rail {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 100%;
+  color: var(--color-foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-study-card__arrow-icon {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .case-study-card {
+    min-height: 270px;
+  }
+
+  .case-study-card__content {
+    grid-template-columns: 20px 1fr;
+    gap: 12px;
+    padding: 12px 46px 0 12px;
+  }
+
+  .case-study-card__skill-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .case-study-card__meta {
+    padding: 8px 46px 14px;
+  }
+
+  .case-study-card__title {
+    font-size: 20px;
+  }
+
+  .case-study-card__role {
+    font-size: 14px;
+  }
+
+  .case-study-card__rail {
+    width: 38px;
+  }
+
+  .case-study-card__arrow-icon {
+    width: 20px;
+    height: 20px;
+  }
+}

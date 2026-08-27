@@ -63,6 +63,7 @@
   --hero-shadow-large: 0 0 100px rgba(255, 250, 242, 1);
   --hero-shadow-xlarge: 0 0 240px rgba(255, 250, 242, 1);
   --scroll-shadow-color: rgba(26, 26, 26, 0.22);
+  --overlay-wash: rgba(0, 0, 0, 0.18);
 }
 
 [data-theme="dark"] {
@@ -75,6 +76,7 @@
   --hero-shadow-large: 0 0 100px rgba(0, 0, 0, 0.7);
   --hero-shadow-xlarge: 0 0 240px rgba(0, 0, 0, 0.85);
   --scroll-shadow-color: rgba(0, 0, 0, 0.5);
+  --overlay-wash: rgba(0, 0, 0, 0.18);
 }
 
 * {
@@ -84,6 +86,7 @@
 html {
   height: 100%;
   overflow-y: scroll;
+  scroll-behavior: auto;
 }
 
 body {
@@ -124,4 +127,34 @@ body {
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+}
+
+.text-h4 {
+  font-family: var(--font-body);
+  font-weight: 900;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.button-standard {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  padding: 8px 20px;
+  border: 1px solid var(--color-foreground);
+  border-radius: 10px;
+  background: var(--color-foreground);
+  color: var(--color-background);
+  text-decoration: none;
+  cursor: pointer;
+  transition: box-shadow 180ms ease, transform 180ms ease, opacity 180ms ease;
+}
+
+.button-standard:hover,
+.button-standard:focus-visible {
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--color-foreground) 24%, transparent);
+  transform: translateY(-1px);
+  outline: none;
 }

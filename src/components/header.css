@@ -29,7 +29,6 @@
 
 .site-header__name {
   margin-left: var(--space-2);
-  font-size: 14px;
 }
 
 .site-header__right {
@@ -99,7 +98,7 @@
 .mobile-menu {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.18);
+  background: var(--overlay-wash);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -144,6 +143,7 @@
   height: 32px;
   border: 0;
   background: transparent;
+  color: inherit;
   cursor: pointer;
 }
 
@@ -171,7 +171,7 @@
   }
 
   .site-header__name {
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 0.08em;
   }
 

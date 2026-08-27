@@ -18,7 +18,7 @@ export default function Footer() {
       </div>
 
       <div className="site-footer__right">
-        <NavLinks />
+        <NavLinks enableDropdowns={false} />
         <ThemeToggle surface={footerSurface} />
       </div>
     </footer>

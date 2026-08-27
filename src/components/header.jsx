@@ -21,7 +21,7 @@ export default function Header() {
       <header className="site-header">
         <a className="site-header__logo" href="/" aria-label="Go to home page">
           <span className="site-header__mark">IGB</span>
-          <span className="site-header__name text-h3">INGRID BURGER</span>
+          <span className="site-header__name text-h4">INGRID BURGER</span>
         </a>
 
         <div className="site-header__right">
