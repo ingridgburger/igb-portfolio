@@ -7,7 +7,7 @@ import FineArtsPage from './pages/fine-arts';
 import EditorialDesignPage from './pages/editorial-design';
 import PosterDesignPage from './pages/poster-design';
 import ViewportScrollShadow from './components/viewport-scroll-shadow';
-import './app.css';
+import './App.css';
 
 function PlaceholderPage({ title }) {
   return (
