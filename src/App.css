@@ -8,6 +8,17 @@
   flex: 1;
 }
 
+.app__hero-viewport {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.app__hero-viewport .app__content {
+  min-height: 0;
+}
+
 .app__placeholder {
   min-height: 56vh;
   padding: var(--space-6) var(--mobile-side-padding);

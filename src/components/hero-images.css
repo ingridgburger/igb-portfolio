@@ -45,15 +45,15 @@
 }
 
 .hero-images__item--left {
-  top: 40px;
+  top: -100px;
   left: -340px;
-  transform: rotate(3deg);
+  transform: rotate(-3deg);
 }
 
 .hero-images__item--right {
-  top: 40px;
+  top: 140px;
   right: -340px;
-  transform: rotate(-3deg);
+  transform: rotate(3deg);
 }
 
 .hero-images__item--off-left,
@@ -65,13 +65,13 @@
 }
 
 .hero-images__item--off-left {
-  top: 40px;
+  top: -100px;
   left: -520px;
   transform: rotate(5deg) scale(0.9);
 }
 
 .hero-images__item--off-right {
-  top: 40px;
+  top: 140px;
   right: -520px;
   transform: rotate(-5deg) scale(0.9);
 }

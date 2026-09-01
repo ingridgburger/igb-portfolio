@@ -57,11 +57,14 @@ function getCurrentPage(pathname) {
 
 function App() {
   const page = getCurrentPage(window.location.pathname);
+  const isHomePage = window.location.pathname === '/';
 
   return (
     <div className="app">
-      <Header />
-      <main className="app__content">{page}</main>
+      <div className={isHomePage ? 'app__hero-viewport' : undefined}>
+        <Header />
+        <main className="app__content">{page}</main>
+      </div>
       <Footer />
       <ViewportScrollShadow />
     </div>
