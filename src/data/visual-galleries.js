@@ -34,8 +34,6 @@ export const visualGalleries = {
     folder: 'editorial-design',
     layout: 'three-three-one',
     images: [
-      // Add entries in the order you want them to appear.
-      // { file: 'your-image-file.webp', title: 'Editorial Piece Title', mediums: ['Medium 1', 'Medium 2'] },
     ],
   },
   'poster-design': {

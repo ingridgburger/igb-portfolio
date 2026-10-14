@@ -5,6 +5,7 @@ export const caseStudies = [
     category: 'Professional',
     coverImage: 'spell',
     skills: ['figma', 'javascript', 'github', 'react', 'typescript', 'adobe'],
+    sectionsHeaders: []
   },
   {
     title: "PETE'S LITTLE LUNCHBOX",
