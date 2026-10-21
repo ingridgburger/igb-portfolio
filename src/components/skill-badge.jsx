@@ -1,11 +1,8 @@
-import { useTheme } from '../context/theme-context';
 import './skill-badge.css';
 
 export default function SkillBadge({ skill }) {
-  const { theme } = useTheme();
-  const iconVariant = theme === 'light' ? 'dark' : 'light';
   const iconSrc = new URL(
-    `../assets/images/icons/${skill.slug}-icon-${iconVariant}.png`,
+    `../assets/images/icons/${skill.slug}-icon.png`,
     import.meta.url
   ).href;
 

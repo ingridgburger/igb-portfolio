@@ -1,18 +1,4 @@
 @font-face {
-  font-family: "Lexend Exa";
-  src: url("./assets/fonts/Lexend_Exa/LexendExa-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Lexend";
-  src: url("./assets/fonts/Lexend/Lexend-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 900;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "DM Sans";
   src: url("./assets/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf") format("truetype");
   font-weight: 100 900;
@@ -26,24 +12,20 @@
   font-style: italic;
 }
 
-@font-face {
-  font-family: "Boldonse";
-  src: url("./assets/fonts/Boldonse/Boldonse-Regular.ttf") format("truetype");
-  font-weight: 800;
-  font-style: italic;
-}
-
 :root {
-  --color-light: #FFFAF2;
-  --color-dark: #1a1a1a;
+  --color-background: #FFFAF2;
+  --color-foreground: #1a1a1a;
+  --color-accent: #f5f9be;
+  --color-accent-strong: #E0E935;
+  --color-accent-2: #D6E0FF;
+  --color-accent-strong-2: #92ADFF;
+  --button-shadow: 0 1px 0 #1a1a1a;
+  --image-shadow: 0 8px 4px rgba(26, 26, 26, 0.25);
 
-  --color-background: var(--color-light);
-  --color-foreground: var(--color-dark);
-
-  --font-logo: "Boldonse", "Lexend Exa", sans-serif;
-  --font-bold: "Lexend Exa", sans-serif;
-  --font-bold-secondary: "Lexend", sans-serif;
   --font-body: "DM Sans", sans-serif;
+  --font-bold: "Dutch Coffee", Georgia, serif;
+  --font-bold-secondary: "DM Sans", sans-serif;
+  --font-serif: "Dutch Coffee", Georgia, serif;
 
   --space-1: 8px;
   --space-2: 16px;
@@ -53,30 +35,23 @@
   --space-6: 48px;
   --space-7: 56px;
   --space-8: 64px;
+  --space-9: 100px;
 
   --mobile-side-padding: var(--space-3);
 
-  --shadow-light: 0px 0px 20px rgba(26, 26, 26, 0.4);
-
-  --hero-shadow-small: 0 0 20px rgba(26, 26, 26, 0.4);
-  --hero-shadow-medium: 0 0 70px rgba(255, 250, 242, 1);
-  --hero-shadow-large: 0 0 100px rgba(255, 250, 242, 1);
-  --hero-shadow-xlarge: 0 0 240px rgba(255, 250, 242, 1);
+  --shadow-small: 0 4 20px rgba(26, 26, 26, 0.4);
+  --shadow-medium: 0 4 70px rgba(255, 250, 242, 1);
+  --shadow-large: 0 4 100px rgba(255, 250, 242, 1);
+  --shadow-xlarge: 0 4 240px rgba(255, 250, 242, 1);
   --scroll-shadow-color: rgba(26, 26, 26, 0.22);
   --overlay-wash: rgba(0, 0, 0, 0.18);
 }
 
-[data-theme="dark"] {
-  --color-background: var(--color-dark);
-  --color-foreground: var(--color-light);
-
-  /* Invert glow balance in dark mode: small glow light, larger glows dark. */
-  --hero-shadow-small: 0 0 20px rgba(255, 255, 255, 0.55);
-  --hero-shadow-medium: 0 0 70px rgba(0, 0, 0, 0.55);
-  --hero-shadow-large: 0 0 100px rgba(0, 0, 0, 0.7);
-  --hero-shadow-xlarge: 0 0 240px rgba(0, 0, 0, 0.85);
-  --scroll-shadow-color: rgba(0, 0, 0, 0.5);
-  --overlay-wash: rgba(0, 0, 0, 0.18);
+@font-face {
+  font-family: "Dutch Coffee";
+  src: url("./assets/fonts/dutch-coffee.otf") format("opentype");
+  font-weight: 400 900;
+  font-style: normal;
 }
 
 * {
@@ -116,45 +91,90 @@ body {
 
 .text-h2 {
   font-family: var(--font-bold-secondary);
-  font-weight: 900;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 20px;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .text-h3 {
   font-family: var(--font-body);
-  font-weight: 900;
+  font-weight: 700;
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
 .text-h4 {
-  font-family: var(--font-body);
-  font-weight: 900;
+  font-family: var(--font-bold-secondary);
+  font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
+.text-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+}
+
 .button-standard {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-1);
-  padding: 8px 20px;
-  border: 1px solid var(--color-foreground);
-  border-radius: 10px;
-  background: var(--color-foreground);
-  color: var(--color-background);
+  width: 180px;
+  height: 40px;
+  padding: 8px 24px;
+  box-sizing: border-box;
+  border: 2px solid var(--color-foreground);
+  border-radius: 999px;
+  background: var(--color-accent-strong);
+  color: var(--color-foreground);
   text-decoration: none;
+  font-family: var(--font-bold-secondary);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
   cursor: pointer;
-  transition: box-shadow 180ms ease, transform 180ms ease, opacity 180ms ease;
+  box-shadow: var(--button-shadow);
+  transition: width 220ms ease, transform 180ms ease;
+  overflow: hidden;
 }
 
 .button-standard:hover,
 .button-standard:focus-visible {
-  box-shadow: 0 2px 8px color-mix(in srgb, var(--color-foreground) 24%, transparent);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   outline: none;
+}
+
+.button-standard--arrow:hover,
+.button-standard--arrow:focus-visible {
+  width: 220px;
+}
+
+.button-standard__arrow {
+  display: inline-block;
+  flex: 0 0 0;
+  width: 0;
+  height: 20px;
+  margin-left: 0;
+  overflow: hidden;
+  opacity: 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  white-space: nowrap;
+  transition: width 220ms ease, margin-left 220ms ease, opacity 120ms ease;
+}
+
+.button-standard--arrow:hover .button-standard__arrow,
+.button-standard--arrow:focus-visible .button-standard__arrow {
+  flex-basis: 20px;
+  width: 20px;
+  margin-left: var(--space-1);
+  opacity: 1;
 }

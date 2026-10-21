@@ -1,0 +1,173 @@
+.about-me-page {
+	display: grid;
+	gap: var(--space-9);
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: var(--space-2) clamp(24px, 5vw, 72px) var(--space-9);
+}
+
+.about-me-page__intro {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	align-items: center;
+	gap: clamp(var(--space-4), 6vw, var(--space-7));
+	min-height: calc(100vh - 88px);
+}
+
+.about-me-page__portrait {
+	width: min(100%, 500px);
+	aspect-ratio: 1;
+	justify-self: center;
+	overflow: hidden;
+	border-radius: 50%;
+	background: var(--color-accent-2);
+}
+
+.about-me-page__portrait img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+}
+
+.about-me-page__intro-copy {
+	display: grid;
+	justify-items: center;
+	text-align: center;
+}
+
+.about-me-page__title {
+	margin: 0;
+	width: min(100%, 420px);
+}
+
+.about-me-page__title img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.about-me-page__social-links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--space-1);
+	margin: var(--space-3) 0 var(--space-4);
+}
+
+.about-me-page__social-link {
+	min-width: 104px;
+	height: 28px;
+	font-size: 11px;
+}
+
+.about-me-page__copy {
+	max-width: 720px;
+	margin: 0;
+	font-family: var(--font-body);
+	font-size: 14px;
+	line-height: 1.45;
+}
+
+.about-me-page__intro-copy > .about-me-page__copy {
+	width: 100%;
+	text-align: left;
+}
+
+.about-me-page__design-section {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(260px, 0.8fr);
+	align-items: center;
+	gap: clamp(var(--space-5), 8vw, var(--space-9));
+}
+
+.about-me-page__design-image {
+	width: 100%;
+	max-width: 420px;
+	justify-self: end;
+}
+
+.about-me-page__design-image img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.about-me-page__hobbies {
+	margin-top: 0;
+}
+
+.about-me-page__hobbies > .about-me-page__copy {
+	max-width: none;
+}
+
+.about-me-page__hobby-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: var(--space-5);
+	width: min(100%, 620px);
+	margin: var(--space-5) auto 0;
+}
+
+.about-me-page__hobby-grid img {
+	width: 100%;
+	aspect-ratio: 1;
+	display: block;
+	border-radius: 6px;
+	object-fit: cover;
+}
+
+@media (max-width: 1100px) {
+	.about-me-page {
+		padding: var(--space-4) var(--mobile-side-padding) var(--space-5);
+	}
+}
+
+@media (max-width: 700px) {
+	.about-me-page {
+		padding-bottom: var(--space-7);
+	}
+
+	.about-me-page__intro,
+	.about-me-page__design-section {
+		grid-template-columns: 1fr;
+		gap: var(--space-5);
+	}
+
+	.about-me-page__portrait {
+		width: min(100%, 340px);
+	}
+
+	.about-me-page__intro-copy {
+		justify-items: center;
+		text-align: center;
+	}
+
+	.about-me-page__intro {
+		min-height: calc(100vh - 72px);
+	}
+
+	.about-me-page__social-links {
+		justify-content: center;
+		margin: var(--space-2) 0 var(--space-3);
+	}
+
+	.about-me-page__design-section,
+	.about-me-page__hobbies {
+		margin-top: 0;
+	}
+
+	.about-me-page {
+		gap: var(--space-7);
+	}
+
+	.about-me-page__design-image {
+		justify-self: center;
+		max-width: 460px;
+	}
+
+	.about-me-page__hobby-grid {
+		gap: var(--space-2);
+		margin-top: var(--space-4);
+	}
+}

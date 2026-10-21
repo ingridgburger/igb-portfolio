@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import NavLinks from './nav-links';
-import ThemeToggle from './theme-toggle';
+import logo from '../assets/images/igb-logo.png';
 import './header.css';
 
 export default function Header() {
@@ -20,14 +20,12 @@ export default function Header() {
     <>
       <header className="site-header">
         <a className="site-header__logo" href="/" aria-label="Go to home page">
-          <span className="site-header__mark">IGB</span>
-          <span className="site-header__name text-h4">INGRID BURGER</span>
+          <img className="site-header__logo-image" src={logo} alt="IGB" />
         </a>
 
         <div className="site-header__right">
           <div className="site-header__desktop-nav">
             <NavLinks />
-            <ThemeToggle />
           </div>
 
           <button
@@ -54,8 +52,6 @@ export default function Header() {
           onClick={(event) => event.stopPropagation()}
         >
           <div className="mobile-menu__top">
-            <ThemeToggle />
-
             <button className="mobile-menu__close" aria-label="Close menu" onClick={closeMenu}>
               <span />
               <span />

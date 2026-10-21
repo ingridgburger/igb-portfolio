@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { useTheme } from '../context/theme-context';
-import newTabIconLight from '../assets/images/icons/new-tab-icon-light.png';
-import newTabIconDark from '../assets/images/icons/new-tab-icon-dark.png';
+import newTabIcon from '../assets/images/icons/new-tab-icon.png';
+import ContactForm from '../components/contact-form';
 import './resume.css';
 
 const EDUCATION_POINTS = [
@@ -95,145 +94,154 @@ const AWARDS = [
 	'Westphal Portfolio Scholarship',
 ];
 
-function ResumeSection({ id, title, isOpen, onToggle, children }) {
-	return (
-		<section className={`resume__section ${isOpen ? 'is-open' : ''}`}>
-			<h2 className="resume__section-title">
-				<button
-					className="resume__trigger text-h3"
-					onClick={() => onToggle(id)}
-					aria-expanded={isOpen}
-					aria-controls={`resume-panel-${id}`}
-					id={`resume-trigger-${id}`}
-				>
-					<span>{title}</span>
-					<span className="resume__plus" aria-hidden="true" />
-				</button>
-			</h2>
-
-			<div
-				className="resume__panel"
-				id={`resume-panel-${id}`}
-				role="region"
-				aria-labelledby={`resume-trigger-${id}`}
-			>
-				<div className="resume__panel-inner">{children}</div>
-			</div>
-		</section>
-	);
-}
-
 export default function ResumePage() {
-	const [openSectionId, setOpenSectionId] = useState('');
-	const { theme } = useTheme();
-	const newTabIcon = theme === 'light' ? newTabIconLight : newTabIconDark;
-
-	const toggleSection = (id) => {
-		setOpenSectionId((current) => (current === id ? '' : id));
-	};
+	const [activeSectionId, setActiveSectionId] = useState('experience');
+	const sections = [
+		{ id: 'experience', title: 'Experience' },
+		{ id: 'education', title: 'Education' },
+		{ id: 'skills', title: 'Skills' },
+		{ id: 'awards', title: 'Awards' },
+	];
 
 	return (
-		<section className="resume-page">
-			<header className="resume-page__header">
-				<h1 className="resume-page__title">
-					<span className="resume-page__title-name text-h1">INGRID BURGER</span>{' '}
-					<span className="resume-page__title-location text-h1--unbold">⚲ Philadelphia, PA</span>
-				</h1>
-				<a
-					className="resume-page__pdf-button button-standard text-h4"
-					href="https://example.com"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<span>View as PDF</span>
-					<img src={newTabIcon} alt="" aria-hidden="true" />
-				</a>
-			</header>
+		<>
+			<section className="resume-page">
+				<header className="resume-page__header">
+					<h1 className="resume-page__title">
+						<span className="text-h1">INGRID BURGER</span>{' '}
+						<span className="text-h2">⚲ Philadelphia, PA</span>
+					</h1>
+				</header>
 
-			<div className="resume-page__accordion">
+				<div className="resume-page__tab-row">
+					<nav className="resume-page__tabs" role="tablist" aria-label="Resume sections">
+						{sections.map((section) => (
+							<button
+								key={section.id}
+								type="button"
+								role="tab"
+								id={`resume-tab-${section.id}`}
+								aria-selected={activeSectionId === section.id}
+								aria-controls={`resume-panel-${section.id}`}
+								className={`resume-page__tab ${
+									activeSectionId === section.id ? 'is-active' : ''
+								}`}
+								onClick={() => setActiveSectionId(section.id)}
+							>
+								<span className="resume-page__tab-background" aria-hidden="true" />
+								<svg
+									className="resume-page__tab-oval"
+									viewBox="0 0 160 56"
+									preserveAspectRatio="none"
+									aria-hidden="true"
+								>
+									<defs>
+										<filter id={`resume-tab-rough-oval-${section.id}`}>
+											<feTurbulence
+												type="fractalNoise"
+												baseFrequency="0.045"
+												numOctaves="3"
+												seed="7"
+												result="noise"
+											/>
+											<feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" />
+										</filter>
+									</defs>
+									<path
+										d="M2 28C2 12 36 5 80 5C124 5 158 12 158 28C158 44 124 51 80 51C36 51 2 44 2 28Z"
+										pathLength="1"
+										style={{ filter: `url("#resume-tab-rough-oval-${section.id}")` }}
+									/>
+								</svg>
+								<span className="resume-page__tab-label">{section.title}</span>
+							</button>
+						))}
+					</nav>
 
-                <ResumeSection
-					id="experience"
-					title="Professional Experience"
-					isOpen={openSectionId === 'experience'}
-					onToggle={toggleSection}
+					<a
+						className="resume-page__pdf-button button-standard text-h4"
+						href="https://example.com"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<span>View as PDF</span>
+						<img src={newTabIcon} alt="" aria-hidden="true" />
+					</a>
+				</div>
+
+				<div
+					className="resume-page__panel"
+					id={`resume-panel-${activeSectionId}`}
+					role="tabpanel"
+					aria-labelledby={`resume-tab-${activeSectionId}`}
 				>
-					<div className="resume__experience-stack">
-						{EXPERIENCE.map((job) => (
-							<article key={`${job.company}-${job.dates}`} className="resume__job">
-								<div className="resume__job-head">
-									<div className="resume__job-title-line">
-										<span className="resume__job-company">{job.company}</span>
-										<span className="resume__job-title-separator" aria-hidden="true">
-											{'   '}
-										</span>
-										<span className="resume__job-role">{job.role}</span>
+					{activeSectionId === 'experience' ? (
+						<div className="resume-page__experience-stack">
+							{EXPERIENCE.map((job) => (
+								<article key={`${job.company}-${job.dates}`} className="resume-page__job">
+									<div className="resume-page__job-head">
+										<div className="resume-page__job-title-line">
+											<span className="resume-page__job-company">{job.company}</span>
+											<span className="resume-page__job-title-separator" aria-hidden="true">
+												{'   '}
+											</span>
+											<span className="resume-page__job-role">{job.role}</span>
+										</div>
+										<p className="resume-page__job-location">⚲ {job.location}</p>
 									</div>
-									<p className="resume__job-location">⚲ {job.location}</p>
-								</div>
-								<p className="resume__job-dates">{job.dates}</p>
-								<ul className="resume__list">
-									{job.bullets.map((point) => (
-										<li key={point}>{point}</li>
-									))}
-								</ul>
-							</article>
-						))}
-					</div>
-				</ResumeSection>
-                
-				<ResumeSection
-					id="education"
-					title="Education"
-					isOpen={openSectionId === 'education'}
-					onToggle={toggleSection}
-				>
-					<h3 className="resume__entry-title">BS in User Experience & Interaction Design</h3>
-					<p className="resume__entry-subtitle">
-						Antoinette Westphal College of Art and Design, Drexel University
-					</p>
-					<ul className="resume__list">
-						{EDUCATION_POINTS.map((item) => (
-							<li key={item}>{item}</li>
-						))}
-					</ul>
+									<p className="resume-page__job-dates">{job.dates}</p>
+									<ul className="resume-page__list">
+										{job.bullets.map((point) => (
+											<li key={point}>{point}</li>
+										))}
+									</ul>
+								</article>
+							))}
+						</div>
+					) : null}
 
-					<h4 className="resume__subheading">Relevant Coursework</h4>
-					<ul className="resume__list resume__list--columns">
-						{COURSEWORK.map((item) => (
-							<li key={item}>{item}</li>
-						))}
-					</ul>
-				</ResumeSection>
-
-				<ResumeSection
-					id="skills"
-					title="Technical Skills"
-					isOpen={openSectionId === 'skills'}
-					onToggle={toggleSection}
-				>
-					<div className="resume__skills-stack">
-						{TECHNICAL_SKILLS.map((group) => (
-							<p key={group.category} className="resume__skill-line">
-								<strong>{group.category}:</strong> {group.values}
+					{activeSectionId === 'education' ? (
+						<>
+							<h3 className="resume-page__entry-title">BS in User Experience & Interaction Design</h3>
+							<p className="resume-page__entry-subtitle">
+								Antoinette Westphal College of Art and Design, Drexel University
 							</p>
-						))}
-					</div>
-				</ResumeSection>
+							<ul className="resume-page__list">
+								{EDUCATION_POINTS.map((item) => (
+									<li key={item}>{item}</li>
+								))}
+							</ul>
 
-				<ResumeSection
-					id="awards"
-					title="Awards"
-					isOpen={openSectionId === 'awards'}
-					onToggle={toggleSection}
-				>
-					<ul className="resume__list">
-						{AWARDS.map((award) => (
-							<li key={award}>{award}</li>
-						))}
-					</ul>
-				</ResumeSection>
-			</div>
-		</section>
+							<h4 className="resume-page__subheading">Relevant Coursework</h4>
+							<ul className="resume-page__list resume-page__list--columns">
+								{COURSEWORK.map((item) => (
+									<li key={item}>{item}</li>
+								))}
+							</ul>
+						</>
+					) : null}
+
+					{activeSectionId === 'skills' ? (
+						<div className="resume-page__skills-stack">
+							{TECHNICAL_SKILLS.map((group) => (
+								<p key={group.category} className="resume-page__skill-line">
+									<strong>{group.category}:</strong> {group.values}
+								</p>
+							))}
+						</div>
+					) : null}
+
+					{activeSectionId === 'awards' ? (
+						<ul className="resume-page__list">
+							{AWARDS.map((award) => (
+								<li key={award}>{award}</li>
+							))}
+						</ul>
+					) : null}
+				</div>
+
+			</section>
+			<ContactForm />
+		</>
 	);
 }

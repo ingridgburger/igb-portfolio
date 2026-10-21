@@ -1,25 +1,18 @@
-import { useTheme } from '../context/theme-context';
 import NavLinks from './nav-links';
 import SocialLinks from './social-links';
-import ThemeToggle from './theme-toggle';
+import logoLight from '../assets/images/igb-logo-light.png';
 import './footer.css';
 
 export default function Footer() {
-  const { theme } = useTheme();
-
-  const footerSurface = theme === 'light' ? 'dark' : 'light';
-  const iconVariant = theme === 'light' ? 'light' : 'dark';
-
   return (
-    <footer className={`site-footer site-footer--${footerSurface}`}>
+    <footer className="site-footer">
       <div className="site-footer__left">
-        <span className="site-footer__mark">IGB</span>
-        <SocialLinks variant={iconVariant} />
+        <img className="site-footer__logo-image" src={logoLight} alt="IGB" />
+        <SocialLinks />
       </div>
 
       <div className="site-footer__right">
-        <NavLinks enableDropdowns={false} />
-        <ThemeToggle surface={footerSurface} />
+        <NavLinks />
       </div>
     </footer>
   );

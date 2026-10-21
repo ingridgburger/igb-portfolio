@@ -25,13 +25,13 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 778px;
-  height: 451px;
+  width: 780px;
+  height: 452px;
   filter:
-    drop-shadow(var(--hero-shadow-small))
-    drop-shadow(var(--hero-shadow-medium))
-    drop-shadow(var(--hero-shadow-large))
-    drop-shadow(var(--hero-shadow-xlarge));
+    drop-shadow(0 0 20px rgba(26, 26, 26, 0.55))
+    drop-shadow(0 0 70px rgba(26, 26, 26, 0.35))
+    drop-shadow(0 0 100px rgba(26, 26, 26, 0.2))
+    drop-shadow(0 0 240px rgba(26, 26, 26, 0.12));
   opacity: 1;
   z-index: 2;
 }
@@ -103,25 +103,25 @@
 
   .hero-images__item--left {
     top: 220px;
-    left: clamp(-138px, -34vw, -90px);
+    left: clamp(-140px, -34vw, -88px);
     opacity: 0.24;
   }
 
   .hero-images__item--right {
     top: 20px;
-    right: clamp(-126px, -31vw, -84px);
+    right: clamp(-128px, -31vw, -84px);
     opacity: 0.24;
   }
 
   .hero-images__item--off-left {
     top: 220px;
-    left: clamp(-210px, -52vw, -160px);
+    left: clamp(-208px, -52vw, -160px);
     opacity: 0;
   }
 
   .hero-images__item--off-right {
     top: 20px;
-    right: clamp(-198px, -49vw, -150px);
+    right: clamp(-200px, -49vw, -152px);
     opacity: 0;
   }
 }

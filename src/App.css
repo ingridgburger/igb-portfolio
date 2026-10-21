@@ -8,6 +8,67 @@
   flex: 1;
 }
 
+.app__content--page {
+  min-height: 100dvh;
+}
+
+.page-transition {
+  position: relative;
+}
+
+.page-transition__page {
+  width: 100%;
+}
+
+.page-transition__page--outgoing {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  animation: page-slide-out 450ms cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+.page-transition__page--incoming {
+  position: relative;
+  z-index: 2;
+  animation: page-slide-in 450ms cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+.page-transition__page--initial {
+  animation: none;
+}
+
+@keyframes page-slide-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-42px);
+  }
+}
+
+@keyframes page-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(42px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition__page--outgoing,
+  .page-transition__page--incoming {
+    animation-duration: 1ms;
+  }
+}
+
 .app__hero-viewport {
   display: flex;
   flex-direction: column;
