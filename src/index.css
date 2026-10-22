@@ -36,9 +36,12 @@
 :root {
   --color-light: #FFFAF2;
   --color-dark: #1a1a1a;
+  --color-accent-light: #F8FD8A;
+  --color-accent-dark: #300f8b;
 
   --color-background: var(--color-light);
   --color-foreground: var(--color-dark);
+  --color-accent: var(--color-accent-light);
 
   --font-logo: "Boldonse", "Lexend Exa", sans-serif;
   --font-bold: "Lexend Exa", sans-serif;
@@ -69,8 +72,8 @@
 [data-theme="dark"] {
   --color-background: var(--color-dark);
   --color-foreground: var(--color-light);
+  --color-accent: var(--color-accent-dark);
 
-  /* Invert glow balance in dark mode: small glow light, larger glows dark. */
   --hero-shadow-small: 0 0 20px rgba(255, 255, 255, 0.55);
   --hero-shadow-medium: 0 0 70px rgba(0, 0, 0, 0.55);
   --hero-shadow-large: 0 0 100px rgba(0, 0, 0, 0.7);
@@ -116,15 +119,15 @@ body {
 
 .text-h2 {
   font-family: var(--font-bold-secondary);
-  font-weight: 900;
-  font-size: 16px;
-  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.06em;
 }
 
 .text-h3 {
   font-family: var(--font-body);
-  font-weight: 900;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -135,26 +138,4 @@ body {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-}
-
-.button-standard {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-1);
-  padding: 8px 20px;
-  border: 1px solid var(--color-foreground);
-  border-radius: 10px;
-  background: var(--color-foreground);
-  color: var(--color-background);
-  text-decoration: none;
-  cursor: pointer;
-  transition: box-shadow 180ms ease, transform 180ms ease, opacity 180ms ease;
-}
-
-.button-standard:hover,
-.button-standard:focus-visible {
-  box-shadow: 0 2px 8px color-mix(in srgb, var(--color-foreground) 24%, transparent);
-  transform: translateY(-1px);
-  outline: none;
 }

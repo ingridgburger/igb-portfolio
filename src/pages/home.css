@@ -35,6 +35,12 @@
 	z-index: 2;
 }
 
+.hero__cta {
+	margin-top: var(--space-2);
+	position: relative;
+	z-index: 2;
+}
+
 .hero__images {
 	margin-top: var(--space-2);
 	width: 100%;

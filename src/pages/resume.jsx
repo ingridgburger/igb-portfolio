@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useTheme } from '../context/theme-context';
 import newTabIconLight from '../assets/images/icons/new-tab-icon-light.png';
 import newTabIconDark from '../assets/images/icons/new-tab-icon-dark.png';
+import Button from '../components/button';
 import './resume.css';
 
 const EDUCATION_POINTS = [
@@ -139,15 +140,17 @@ export default function ResumePage() {
 					<span className="resume-page__title-name text-h1">INGRID BURGER</span>{' '}
 					<span className="resume-page__title-location text-h1--unbold">⚲ Philadelphia, PA</span>
 				</h1>
-				<a
-					className="resume-page__pdf-button button-standard text-h4"
+				<Button
+					as="a"
+					className="resume-page__pdf-button text-h4"
 					href="https://example.com"
 					target="_blank"
 					rel="noopener noreferrer"
+					icon={<img src={newTabIcon} alt="" />}
+					iconPosition="right"
 				>
-					<span>View as PDF</span>
-					<img src={newTabIcon} alt="" aria-hidden="true" />
-				</a>
+					View as PDF
+				</Button>
 			</header>
 
 			<div className="resume-page__accordion">

@@ -1,12 +1,15 @@
 import Header from './components/header';
 import Footer from './components/footer';
-import HomePage from './pages/home';
+import HomePage from './pages/Home.jsx';
 import ResumePage from './pages/resume';
 import CaseStudiesPage from './pages/case-studies';
 import FineArtsPage from './pages/fine-arts';
 import EditorialDesignPage from './pages/editorial-design';
 import PosterDesignPage from './pages/poster-design';
 import ViewportScrollShadow from './components/viewport-scroll-shadow';
+import BackToTop from './components/back-to-top';
+import CaseStudyPage from './pages/case-study-page';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 
 function PlaceholderPage({ title }) {
@@ -17,56 +20,33 @@ function PlaceholderPage({ title }) {
   );
 }
 
-function getCurrentPage(pathname) {
-  const normalized = pathname.toLowerCase().replace(/\/$/, '') || '/';
-
-  if (normalized === '/') {
-    return <HomePage />;
-  }
-
-  if (normalized === '/resume') {
-    return <ResumePage />;
-  }
-
-  if (normalized === '/case-studies') {
-    return <CaseStudiesPage />;
-  }
-
-  if (normalized === '/visual-arts') {
-    return <PlaceholderPage title="Visual Arts" />;
-  }
-
-  if (normalized === '/fine-arts') {
-    return <FineArtsPage />;
-  }
-
-  if (normalized === '/editorial-design') {
-    return <EditorialDesignPage />;
-  }
-
-  if (normalized === '/poster-design') {
-    return <PosterDesignPage />;
-  }
-
-  if (normalized === '/about') {
-    return <PlaceholderPage title="About Me" />;
-  }
-
-  return <PlaceholderPage title="Page Not Found" />;
-}
-
 function App() {
-  const page = getCurrentPage(window.location.pathname);
-  const isHomePage = window.location.pathname === '/';
+  const { pathname } = useLocation();
+  const isHomePage = pathname === '/';
+  const isCaseStudyPage = pathname.startsWith('/case-studies/');
 
   return (
     <div className="app">
-      <div className={isHomePage ? 'app__hero-viewport' : undefined}>
+      <div className={isHomePage ? 'app__hero-viewport' : isCaseStudyPage ? 'app__case-study-viewport' : undefined}>
         <Header />
-        <main className="app__content">{page}</main>
+        <main className="app__content">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/resume" element={<ResumePage />} />
+            <Route path="/case-studies" element={<CaseStudiesPage />} />
+            <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
+            <Route path="/visual-arts" element={<PlaceholderPage title="Visual Arts" />} />
+            <Route path="/fine-arts" element={<FineArtsPage />} />
+            <Route path="/editorial-design" element={<EditorialDesignPage />} />
+            <Route path="/poster-design" element={<PosterDesignPage />} />
+            <Route path="/about" element={<PlaceholderPage title="About Me" />} />
+            <Route path="*" element={<PlaceholderPage title="Page Not Found" />} />
+          </Routes>
+        </main>
       </div>
       <Footer />
       <ViewportScrollShadow />
+      <BackToTop />
     </div>
   );
 }

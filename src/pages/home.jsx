@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import SkillsBar from '../components/skills-bar';
 import HeroImages from '../components/hero-images';
+import Button from '../components/button';
 import './home.css';
 
 const ROLE_TITLES = ['UX / UI DESIGNER.', 'FRONT-END DEVELOPER.'];
@@ -66,6 +66,10 @@ export default function HomePage() {
 			<p className="hero__subtitle">
 				Designing thoughtful experiences from concept to code.
 			</p>
+
+			<Button as="a" href="/case-studies" className="hero__cta text-h4">
+				Explore Work
+			</Button>
 
 			<div className="hero__images">
 				<HeroImages />

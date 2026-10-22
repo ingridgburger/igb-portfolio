@@ -19,6 +19,17 @@
   min-height: 0;
 }
 
+.app__case-study-viewport {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.app__case-study-viewport .app__content {
+  flex: 1;
+}
+
 .app__placeholder {
   min-height: 56vh;
   padding: var(--space-6) var(--mobile-side-padding);
