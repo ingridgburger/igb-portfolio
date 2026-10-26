@@ -2,15 +2,7 @@ import './nav-links.css';
 
 const links = [
   { label: 'CASE STUDIES', href: '/case-studies' },
-  {
-    label: 'VISUAL ARTS',
-    href: '/visual-arts',
-    children: [
-      { label: 'FINE ARTS', href: '/fine-arts' },
-      { label: 'EDITORIAL DESIGN', href: '/editorial-design' },
-      { label: 'POSTER DESIGN', href: '/poster-design' },
-    ],
-  },
+  { label: 'VISUAL ARTS', href: '/visual-arts' },
   { label: 'RESUME', href: '/resume' },
   { label: 'ABOUT ME', href: '/about' },
 ];

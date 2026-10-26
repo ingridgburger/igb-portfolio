@@ -1,0 +1,51 @@
+.visual-arts-page__header {
+  padding: var(--space-5) var(--space-5) 0;
+  text-align: center;
+}
+
+.visual-arts-page__title {
+  margin: 0;
+}
+
+.visual-arts-page__tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.visual-arts-page__tab {
+  padding: 6px var(--space-2);
+  border: 1px solid var(--color-foreground);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-foreground);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.visual-arts-page__tab:hover,
+.visual-arts-page__tab:focus-visible {
+  background: var(--color-accent-light);
+  color: var(--color-dark);
+  outline: none;
+}
+
+.visual-arts-page__tab--active {
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+.visual-gallery--embedded {
+  padding-top: var(--space-4);
+}
+
+@media (max-width: 1100px) {
+  .visual-arts-page__header {
+    padding: var(--space-4) var(--mobile-side-padding) 0;
+  }
+}

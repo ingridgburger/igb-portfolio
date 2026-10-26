@@ -29,7 +29,7 @@ function resolveImageSrc(folder, file) {
   return matchedSrc || '';
 }
 
-export default function VisualGalleryPage({ galleryKey }) {
+export default function VisualGalleryPage({ galleryKey, showTitle = true }) {
   const gallery = visualGalleries[galleryKey];
   const [selectedImage, setSelectedImage] = useState(null);
   const safeGallery = gallery || {
@@ -87,9 +87,9 @@ export default function VisualGalleryPage({ galleryKey }) {
   }
 
   return (
-    <section className={`visual-gallery visual-gallery--${layout}`}>
+    <section className={`visual-gallery visual-gallery--${layout}${showTitle ? '' : ' visual-gallery--embedded'}`}>
       <header className="visual-gallery__header">
-        <h1 className="visual-gallery__title text-h1">{title}</h1>
+        {showTitle ? <h1 className="visual-gallery__title text-h1">{title}</h1> : null}
         <p className="visual-gallery__blurb">{blurb}</p>
         <h3 className="text-h3">( Click any image to enlarge )</h3>
       </header>

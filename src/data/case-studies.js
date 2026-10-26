@@ -18,14 +18,60 @@ import shreya from '../assets/images/spell-case-study/shreya-spread.webp';
 import sanai from '../assets/images/spell-case-study/sanai-spread.webp';
 import xander from '../assets/images/spell-case-study/xander-spread.webp';
 
-import intealthCover from '../assets/images/'
+import intealthCover from '../assets/images/intealth-cover.webp'
 import intealthHero from '../assets/images/intealth-case-study/intealth-hero.gif'
 import intealthLogo from '../assets/images/intealth-case-study/intealth-circle-dark.webp';
+import designCover from '../assets/images/intealth-case-study/design-cover.webp'
+import designMd from '../assets/images/intealth-case-study/figma-to-designmd.webp';
+import schoolSearch from '../assets/images/intealth-case-study/school-search.webp';
+import schoolDetails from '../assets/images/intealth-case-study/school-details.webp'
+import addSchoolNote from '../assets/images/intealth-case-study/add-school-note.webp';
+import addSchoolNoteConfirmation from '../assets/images/intealth-case-study/add-school-note-confirmation.webp';
+import sponsorNotes from '../assets/images/intealth-case-study/sponsor-notes.webp';
+
+import weckerlysCover from '../assets/images/weckerlys-cover.webp';
+import weckerlysHero from '../assets/images/weckerlys-case-study/weckerlys-cover.gif';
+import weckerlysLogo from '../assets/images/weckerlys-case-study/weckerlys-logo.webp';
+import accessibilityCover from '../assets/images/weckerlys-case-study/accessibility.webp';
+import brandingCover from '../assets/images/weckerlys-case-study/branding.webp';
+import jotformCover from '../assets/images/weckerlys-case-study/jotform.webp';
+import marketingAnalyticsCover from '../assets/images/weckerlys-case-study/marketing-analytics.webp';
+import brandIdentityTOC from '../assets/images/weckerlys-case-study/brand-identity-toc.webp';
+import mission from '../assets/images/weckerlys-case-study/mission.webp';
+import values from '../assets/images/weckerlys-case-study/values.webp';
+import purposePromisePosition from '../assets/images/weckerlys-case-study/purpose-promise-position.webp';
+import essencePersonality from '../assets/images/weckerlys-case-study/essence-personality.webp';
+import visualIdentityTOC from '../assets/images/weckerlys-case-study/visual-identity-cover.webp';
+import primaryColorPalette from '../assets/images/weckerlys-case-study/primary-color-palette.webp';
+import secondaryColorPalette from '../assets/images/weckerlys-case-study/secondary-color-palette.webp';
+import mainLogos from '../assets/images/weckerlys-case-study/main-logos.webp';
+import lotusLogo from '../assets/images/weckerlys-case-study/lotus-logo.webp';
+import doubleLineNamemark from '../assets/images/weckerlys-case-study/double-line-namemark.webp';
+import singleLineNamemark from '../assets/images/weckerlys-case-study/single-line-namemark.webp';
+import typography from '../assets/images/weckerlys-case-study/typography.webp';
+import jotform1 from '../assets/images/weckerlys-case-study/jotform1.webp';
+import jotform2 from '../assets/images/weckerlys-case-study/jotform1.webp';
+import jotform3 from '../assets/images/weckerlys-case-study/jotform1.webp';
+import jotform4 from '../assets/images/weckerlys-case-study/jotform1.webp';
+import jotform5 from '../assets/images/weckerlys-case-study/jotform1.webp';
+import marketingCalendar from '../assets/images/weckerlys-case-study/marketing-calendar.webp';
+import socialMediaAnalytics from '../assets/images/weckerlys-case-study/social-media-analytics.webp';
+import googleProfileAnalytics from '../assets/images/weckerlys-case-study/google-profile-analytics.webp'
 
 import petesCover from '../assets/images/petes-cover.webp';
+import petesHero from '../assets/images/petes-case-study/petes-hero.gif';
 import petesLogo from '../assets/images/petes-case-study/petes-circle-dark.webp';
+import appDemo from '../assets/images/petes-case-study/app-demo.MOV';
+import toDev from '../assets/images/petes-case-study/to-dev.webp';
+import customizationOptions from '../assets/images/petes-case-study/customization-options.webp';
+import customizationVid from '../assets/images/petes-case-study/customization.MOV';
+import querying from '../assets/images/petes-case-study/querying.webp';
+import checkout from '../assets/images/petes-case-study/checkout.webp';
+import checkoutFlow from '../assets/images/petes-case-study/checkout-flow.MOV';
+import finalApplicationScreens from '../assets/images/petes-case-study/final-application-screens.png'
+
 import soupCover from '../assets/images/soup-cover.webp';
-import weckerlysCover from '../assets/images/weckerlys-cover.webp';
+import soupHero from '../assets/images/soup-case-study/soup-hero.gif'
 
 export const caseStudies = [
   {
@@ -157,6 +203,116 @@ export const caseStudies = [
           "I followed an iterative process between design and development: translating requirements into designs, considering reusable patterns and component behavior, and then bringing those designs into the application. Working directly in the codebase let me identify technical constraints early and refine designs based on how the product was actually built.",
         ],
       },
+      { type: 'section-title', text: 'Projects' },
+      {
+        type: 'body',
+        text: [
+          "Throughout my co-op, I contributed to several applications within Intealth’s Modern Apps ecosystem. Each project gave me the opportunity to work across different parts of the UX and development process, from interface design and component systems to implementation and refinement. Many of my contributions cannot be publicly shared or are part of internal applications, but this is a selection of publicly shareable projects.",
+        ],
+      },
+      {
+        type: 'expansion-cards',
+        variant: 'large',
+        cards: [
+          {
+            image: designCover,
+            alt: 'Styleguide and DESIGN.md cover',
+            title: 'Style Guide and DESIGN.md',
+            preview: 'A five-route structure gives readers and contributors direct paths.',
+            expandedContent: [
+              { type: 'section-title', text: "The Challenge"},
+              { 
+                type: 'body', 
+                text: [
+                  "Working closely with fellow UX Design and Development co-op Olivia Knestaut, I contributed to a multi-phase effort to establish a consistent design system and AI-assisted design workflow for the Modern Apps team.",
+                  "The team lacked a single source of truth for its design standards. While brand colors and typography existed, they had not been formally centralized or defined. Over time, colors, typography, spacing, and components began to drift between applications, creating inconsistencies across designs and implementations.",
+                ]
+              },
+              { type: 'section-title', text: 'Creating a Single Source of Truth'},
+              { type: 'body',
+                text: [
+                  "We built a centralized Figma style guide that brings Modern Apps' visual standards into one place. It defines brand and system colors, typography, spacing, and component styling, with reusable Figma libraries for future designs. Designers now have one consistent reference instead of recreating styles or interpreting existing applications differently.",
+                  "To carry those standards into implementation, we translated the Figma specs into a DESIGN.md file. It pairs AI-readable front matter that defines design tokens with human-readable documentation. Designers and AI agents now work from the same documented system, so the AI doesn't have to invent design rules.",
+                ]
+              },
+              { type: 'photo', src: designMd, alt: 'Figma design system to DESIGN.md'},
+            ],
+          },
+          {
+            image: schoolSearch,
+            alt: 'WDOMS school search interface',
+            title: 'WDOMS Modernization',
+            preview: 'A five-route structure gives readers and contributors direct paths.',
+            expandedContent: [
+              { type: 'section-title', text: "The Challenge"},
+              { 
+                type: 'body', 
+                text: [
+                  "WDOMS is the World Directory of Medical Schools, a public directory of medical education programs worldwide, run by WFME and FAIMER, a division of Intealth. A companion subscription service lets organizations manage their own sponsor notes. The information was reliable, but the design had aged. With search and subscription moving to a new implementation, I worked with fellow UX Design and Development co-op Olivia Knestaut to redesign both sides around a new WDOMS identity, keeping the structure users already knew.",
+                ]
+              },
+              { type: 'section-title', text: 'Redesigning Both Sides of the Product'},
+              { type: 'body',
+                text: [
+                  "The legacy site used a fixed-width layout on a beige background, with a banner header and gradient panels. The redesign is full width, with a navy header and coral accents. On search, the school name field now comes first, and results include a view icon on each row and a page-size control. School records moved from nested tabs (School Details, Contact Information, Program Details, Sponsor Notes) to collapsible sections on one page, with a Back to Search link in the header. For subscribers, the sponsor notes modal gained a formatting toolbar (bold, italic, highlight) and a preview step before saving. The notes table lists each note with its school, country, user, and update date, plus edit and delete actions. Here are a few examples of page updates:",
+                ]
+              },
+              {
+                type: 'carousel',
+                photos: [
+                  {
+                    src: schoolSearch,
+                    alt: 'School Search legacy to modernized',
+                    caption: 'Modernizing the School Search page.',
+                  },
+                  {
+                    src: schoolDetails,
+                    alt: 'School Details legacy to modernized',
+                    caption: 'Modernizing the School Details page.',
+                  },
+                  {
+                    src: addSchoolNote,
+                    alt: 'Add School Note legacy to modernized',
+                    caption: 'Modernizing the Add School Note popup.',
+                  },
+                  {
+                    src: addSchoolNoteConfirmation,
+                    alt: 'Add School Note Confirmation legacy to modernized',
+                    caption: 'Modernizing the Add School Note Confirmation popup.',
+                  },
+                  {
+                    src: sponsorNotes,
+                    alt: 'Sponsor Notes legacy to modernized',
+                    caption: 'Modernizing the Sponsor Notes page.',
+                  },
+                ],
+              },
+              { type: 'section-title', text: 'Reusing Existing Application Patterns'},
+              { type: 'body',
+                text: [
+                  "Because we both work across design and development, we designed with the Modern Apps architecture in mind. Instead of creating every pattern from scratch, we reused structures already established in other Intealth applications, including secure B2C login, billing, and payment flows. The legacy multi-step challenge image login was replaced with the login structure used elsewhere in Modern Apps, restyled for WDOMS. Developers got a familiar foundation, and users got an updated experience.",
+                ]
+              },
+              { type: 'section-title', text: 'Prototyping & Collaboration'},
+              { type: 'body',
+                text: [
+                  "We built the redesigned screens into a fully navigable Figma prototype so stakeholders across Intealth could experience the flows before development began. We also met with the communications and front-end web development teams to review the screens and gather feedback, then implemented changes so the designs aligned with WDOMS's transition from FAIMER and Intealth branding to its own identity.",
+                ]
+              },
+              {
+                type: 'iframe',
+                src: 'https://embed.figma.com/proto/2PO9lrpm2FnGdvAgYPkVTR/Intealth-Team-Library?node-id=17825-5654&starting-point-node-id=17834%3A28128&embed-host=share',
+                title: 'Intealth Team Library Figma prototype',
+              },
+              { type: 'body',
+                text: [
+                  "The result is a modern foundation for WDOMS: a distinct identity for the WFME and FAIMER collaboration, updated search, record, and sponsor notes experiences, and designs reviewed by the teams who would communicate and build them.",
+                ]
+              },
+            ],
+          },
+        ],
+      }
     ],
   },
   {
@@ -167,9 +323,195 @@ export const caseStudies = [
     coverImage: petesCover,
     skills: ['figma', 'react', 'javascript', 'github', 'php', 'html', 'css', 'graphql'],
     logo: petesLogo,
-    heroImage: petesCover,
-    introImage: spellEditions,
-    blocks: [{ type: 'section-title', text: 'Case study coming soon' }],
+    heroImage: petesHero,
+    blocks: [
+      { type: 'section-title', text: 'Introduction' },
+      { 
+        type: 'body', 
+        text: [
+          "Pete's Little Lunch Box was a mobile-first ordering web app that let users browse a food truck menu, customize items, check out, and receive pickup receipts. Over 10 weeks in User Experience Design II (IDM 216), my four-person team, Flare, transformed a high-fidelity Figma prototype into a functional web application using HTML, CSS, JavaScript, PHP, and MySQL.",
+          "My role combined UX/UI design and full-stack development. I helped shape the user experience and visual language, refined the ordering flow through usability testing, and translated Figma designs into code. I also built dynamic menu templates with PHP and used MySQL to connect menu items, customization options, and pricing."
+        ],
+      },
+      {
+        type: 'video',
+        src: appDemo,
+        alt: "Pete's Little Lunchbox app demo",
+        width: 33,
+        autoplay: true,
+        loop: true,
+        audio: false,
+        controls: false,
+      },
+      {
+        type: 'button',
+        text: 'Explore Live App',
+        href: 'https://digmstudents.westphal.drexel.edu/~sej84/idm216/app',
+        external: true,
+      },
+      { type: 'section-title', text: 'The Challenge' },
+      {
+        type: 'body',
+        text: [ 
+          "The challenge was turning our Figma prototype into a functional, responsive ordering app without losing the intended user experience. Users needed to browse and customize menu items, track dynamic pricing, complete checkout, and receive pickup receipts, all while keeping the interface intuitive and reliable.",
+          "Our main goals centered around:",
+        ]
+      },
+      {
+        type: 'list',
+        ordered: false,
+        items: [
+          {
+            label: 'Experience',
+            text: 'Create a clear ordering flow with intuitive customization and checkout.',
+          },
+          {
+            label: 'Technicality',
+            text: 'Build a responsive app with dynamic menu data, pricing, and order calculations.',
+          },
+          {
+            label: 'Process',
+            text: 'Maintain organized collaboration and use usability testing to guide improvements.',
+          },
+        ],
+      },
+      { type: 'section-title', text: 'Team & Process' },
+      {
+        type: 'body',
+        text: [
+          "Flare had four roles: Project Managers, Designers, Coders, and Data Architects. My roles were as both Designer and Coder, alongside Shannon Jaya, combining UX/UI design, usability testing, and development.",
+          "The project progressed through five phases, from team setup and prototype refinement to Alpha and Beta testing and final deployment. We used Microsoft Teams for communication and task management and GitHub for version control."
+        ]
+      },
+      { type: 'section-title', text: "Designing and Developing Pete’s" },
+      { type: 'body', text: "Turning a high-fidelity prototype into a functional ordering experience through front-end development, dynamic menus, and streamlined ordering flows." },
+      {
+        type: 'expansion-cards',
+        cards: [
+          {
+            image: toDev,
+            alt: "Pete's Little Lunch Box project preview",
+            title: 'From Prototype to Front-End Code',
+            preview: 'Translated Figma designs into an interactive app interface.',
+            expandedContent: [
+              { 
+                type: 'body', 
+                text: [
+                  'The IDM 215 Figma prototype defined the brand, interface structure, navigation flow, and interaction patterns. Working with Shannon, I helped translate the design into code while maintaining visual consistency and supporting the intended user experience.',
+                  'We built the front-end pages using HTML and CSS, including the lunchbox, checkout, and confirmation screens, and created static HTML prototypes to establish layout and hierarchy before adding dynamic functionality. We also worked with JavaScript to support interactive ordering features, bridging the gap between the original Figma designs and a functional web application.'
+                ]
+              },
+            ],
+          },
+          {
+            image: customizationOptions,
+            alt: "Pete's Little Lunch Box customization options",
+            title: 'Intuitive Customization',
+            preview: 'Simplified customization with clear options and live pricing.',
+            expandedContent: [
+              { 
+                type: 'body',
+                text: [
+                  'Customization was central to the ordering experience but also a potential source of confusion. Users could select bagel types, toppings, spreads, and sizes, each affecting the price.',
+                  "We focused on making choices and costs clear through tappable options with calorie counts, a quantity stepper, and a live-price add-to-order button. After each addition, a confirmation message linked directly to the lunchbox. Usability testing helped refine the interface for greater clarity."
+                ]
+               },
+              {
+                type: 'video',
+                src: customizationVid,
+                alt: "Pete's Little Lunchbox item customization",
+                width: 80,
+                autoplay: true,
+                loop: true,
+                audio: false,
+                controls: false,
+              },
+            ],
+          },
+          {
+            image: querying,
+            alt: "PHP querying code",
+            title: 'A Database-Driven Menu',
+            preview: 'Built dynamic menu templates with PHP and MySQL.',
+            expandedContent: [
+              { 
+                type: 'body', 
+                text: [
+                  "I worked on the part of the system that made the menu dynamic. Instead of hardcoding every item into HTML, we stored menu categories, items, customization options, and pricing in MySQL tables and pulled them into the interface with PHP.", 
+                  "We structured PHP queries to retrieve menu categories and items from the database, wrote loops that display each item inside its correct category, and converted my static HTML menu layouts into dynamic templates that render database content. Because the page responds to the data, the menu can show the right number of categories, items, and options without anyone editing the HTML by hand. This was the point where the design and the code met most directly: the same layouts we had designed now flexed to whatever the database held."
+
+                ]
+              },
+            ],
+          },
+          {
+            image: checkout,
+            alt: "Pete's Little Lunch Box lunchbox, checkout, and pickup flow",
+            title: 'Lunchbox, Checkout, and Pickup',
+            preview: 'Refined cart, checkout, and order tracking flows.',
+            expandedContent: [
+              { 
+                type: 'body', 
+                text: [
+                  "The ordering flow after selection is where a lot of ordering apps lose people, so we treated it as its own design problem. The lunchbox acts as the cart, showing each item with its chosen options, quantity controls, and suggestions for other items to add. Checkout lets users pick a pickup time, choose a tip, review the subtotal, tax, tip, and total, and select a payment method. After checkout, a confirmation screen shows the order number and pickup time, and the Orders tab tracks an active order from received to preparing to ready.",
+                  "The design focus here was progression. Every screen answers the same two questions: where am I in the process, and what happens next. Testing feedback on confusing moments in checkout and confirmation led directly to changes in this flow."
+                ]
+              },
+              {
+                type: 'video',
+                src: checkoutFlow,
+                alt: "Pete's Little Lunchbox item customization",
+                width: 80,
+                autoplay: true,
+                loop: true,
+                audio: false,
+                controls: false,
+              },
+            ],
+          },
+        ],
+      },
+      { type: 'section-title', text: 'Testing & Iteration' },
+      {
+        type: 'body',
+        text: [
+          "As part of my design role, I helped run several usability testing sessions across two rounds, one on the Alpha build and one on the Beta build. Watching people move through the app showed us where layout, customization, and navigation needed work.",
+          "Based on what we saw, I made changes to:"
+        ]
+      },
+      {
+        type: 'list',
+        ordered: false,
+        items: [
+          {
+            label: 'The ordering workflow',
+            text: 'so it was easier to understand.',
+          },
+          {
+            label: 'The customization interface',
+            text: 'for clarity.',
+          },
+          {
+            label: 'The checkout flow',
+            text: 'around the points where users got confused.',
+          },
+          {
+            label: 'The order confirmation',
+            text: 'so it communicated more clearly.',
+          },
+        ],
+      },
+      { type: 'section-title', text: 'The Solution' },
+      { 
+        type: 'body',
+        text: "The final product was a responsive, mobile-first ordering web app featuring an interactive menu, customizable items, real-time order totals with sales tax, and pickup receipts with order numbers. Built with HTML, CSS, JavaScript, PHP, and a database-backed menu, the application brought the Figma prototype to life through a complete design and development process."
+      },
+      { type: 'photo', src: finalApplicationScreens, alt: 'Final application screens' },
+      {
+        type: 'body',
+        text: "Two rounds of usability testing informed iterative improvements to the interface, while Microsoft Teams and GitHub supported team collaboration. This project showed me how understanding both design and development helps preserve visual consistency, create clearer user experiences, and turn an early concept into a fully functional product."
+      }
+    ],
   },
   {
     slug: 'soup-phl',
@@ -179,8 +521,7 @@ export const caseStudies = [
     coverImage: soupCover,
     skills: ['framer', 'adobe'],
     logo: spellLogo,
-    heroImage: spellCover,
-    introImage: spellEditions,
+    heroImage: soupHero,
     blocks: [{ type: 'section-title', text: 'Case study coming soon' }],
   },
   {
@@ -190,9 +531,492 @@ export const caseStudies = [
     category: 'Professional',
     coverImage: weckerlysCover,
     skills: ['figma', 'react', 'javascript', 'github', 'adobe', 'css', 'google'],
-    logo: spellLogo,
-    heroImage: spellCover,
-    introImage: spellEditions,
-    blocks: [{ type: 'section-title', text: 'Case study coming soon' }],
+    logo: weckerlysLogo,
+    heroImage: weckerlysHero,
+    blocks: [
+      { type: 'section-title', text: 'Introduction' },
+      {
+        type: 'body',
+        text: [
+          "At Weckerly's Ice Cream, I led marketing and digital strategy across all customer touchpoints. I built structured marketing systems, designed accessible digital experiences, and created content that kept messaging consistent across web, social media, and in-store channels, strengthening the brand's connection with its community.",
+        ],
+      },
+      { type: 'section-title', text: 'The Challenge' },
+      {
+        type: 'body',
+        text: [
+          "Weckerly's is a small-batch, handmade ice cream company in Philadelphia. It had recently expanded under new ownership with a second location, and its digital presence, marketing systems, and workflows needed to scale to support both shops while keeping the craft-focused identity intact. Marketing had been handled ad hoc, the website lacked accessibility, and internal workflows were inconsistent. There was also no structured way to measure performance or keep the brand consistent across platforms.",
+          "The goals were to create a cohesive digital experience, improve the website's accessibility and navigation, build a repeatable marketing and analytics system, and unify brand visuals and messaging across every touchpoint.",
+        ],
+      },
+      { type: 'section-title', text: 'Projects' },
+      {
+        type: 'body',
+        text: [
+          "I focused on designing systems that connected UX, brand identity, and marketing workflows. Each of the following projects addresses a specific part of the brand's digital and operational ecosystem.",
+        ],
+      },
+      {
+        type: 'expansion-cards',
+        variant: 'large',
+        cards: [
+          {
+            image: accessibilityCover,
+            alt: 'Accessibility redesign',
+            title: 'Accessibility Redesign',
+            preview: "Redesigned Weckerly's website for brand and ADA compliance, adding an accessibility toggle and improving user flow, SEO, and image performance.",
+            expandedContent: [
+              { type: 'section-title', text: 'Process' },
+              {
+                type: 'list',
+                items: [
+                  {
+                    title: 'Site Audit and Strategy',
+                    bullets: [
+                      'Conducted a full content audit to identify structural and accessibility issues.',
+                      'Evaluated SEO performance, navigation flow, and readability.',
+                      'Reviewed color contrast, image use, and text hierarchy for compliance and clarity.',
+                    ],
+                  },
+                  {
+                    title: 'Redesign and Brand Alignment',
+                    bullets: [
+                      'Applied new brand colors, typography, and logo across all pages to ensure consistency.',
+                      'Simplified navigation and improved hierarchy for easier access to menus, catering, and location information.',
+                      'Redesigned the layout of key pages to improve flow, visual balance, and scanability.',
+                      'Created clear, high-contrast buttons and headers that improved both aesthetics and legibility.',
+                    ],
+                  },
+                  {
+                    title: 'Accessibility and SEO Optimization',
+                    bullets: [
+                      'Added descriptive and consistent alt text across all images to support screen readers and improve search ranking.',
+                      'Optimized all images for faster page loading without reducing quality.',
+                      'Improved color contrast to meet WCAG 2.1 AA standards using approved shades from the updated palette.',
+                      'Reorganized headings and metadata for stronger SEO structure and better content discovery.',
+                      'Integrated a custom accessibility button using JavaScript and CSS in Squarespace to allow users to toggle contrast and adjust text size for improved readability.',
+                    ],
+                  },
+                ],
+              },
+            ]
+          },
+          {
+            image: brandingCover,
+            alt: 'Brand identity',
+            title: 'Brand Identity',
+            preview: "Created new brand guidelines, a color palette, typography system, and logo suite to unify Weckerly's visuals across digital and physical touchpoints.",
+            expandedContent: [
+              { type: 'section-title', text: 'The Challenge' },
+              { 
+                type: 'body',
+                text: "The Weckerly’s website needed a refresh to align with the new brand identity and improve usability. The previous structure hindered navigation, and accessibility issues like low contrast, missing alt text, and inconsistent SEO tagging limited user experience and search performance. The goal was to create a cohesive, accessible, and search-optimized site that reflected the updated brand."
+              },
+              { type: 'section-title', text: 'Brand Identity' },
+              {
+                type: 'carousel',
+                photos: [
+                  {
+                    src: brandIdentityTOC,
+                    alt: 'Brand identity table of contents',
+                  },
+                  {
+                    src: mission,
+                    alt: 'Mission',
+                  },
+                  {
+                    src: values,
+                    alt: 'Values',
+                  },
+                  {
+                    src: purposePromisePosition,
+                    alt: 'Purpose promise and position',
+                  },
+                  {
+                    src: essencePersonality,
+                    alt: 'Essence and personality',
+                  },
+                ],
+              },
+              { 
+                type: 'body',
+                text: "I began the rebrand by updating Weckerly’s brand guidelines, starting with the foundational elements that define the brand’s voice and purpose. These include the mission, values, promise, purpose and position, and essence and personality. Each was reviewed and refined to ensure it aligned with where the company is today and where it is heading. The document was designed and formatted to visually represent the brand’s personality through color use, layout, and tone."
+              },
+              { type: 'section-title', text: 'Visual Identity' },
+              {
+                type: 'carousel',
+                photos: [
+                  {
+                    src: visualIdentityTOC,
+                    alt: 'Visual identity table of contents',
+                  },
+                  {
+                    src: primaryColorPalette,
+                    alt: 'Primary color palette',
+                  },
+                  {
+                    src: secondaryColorPalette,
+                    alt: 'Secondary color palette',
+                  },
+                  {
+                    src: mainLogos,
+                    alt: 'Main logos',
+                  },
+                  {
+                    src: lotusLogo,
+                    alt: 'Lotus logo',
+                  },
+                  {
+                    src: doubleLineNamemark,
+                    alt: 'Double line namemark',
+                  },
+                  {
+                    src: singleLineNamemark,
+                    alt: 'Single line namemark',
+                  },
+                  {
+                    src: typography,
+                    alt: 'Typography',
+                  },
+                ],
+              },
+              { 
+                type: 'body',
+                text: "The next phase focused on creating a cohesive and flexible visual system that could extend across all brand touchpoints, both digital and physical."
+              },
+              {
+                type: 'section-subtitle',
+                text: 'Color Palette',
+              },
+              {
+                type: 'body',
+                text: "The new palette centers on two main color families: pinks and greens, paired with warm neutrals for balance."
+              },
+              {
+                type: 'list',
+                ordered: false,
+                items: [
+                  {
+                    title: 'Pinks',
+                    bullets: [
+                      'Strawberry (#F17C80)',
+                      'Cherry Blossom (#FFAAAA)',
+                      'Rose (#FFCFCF)',
+                      'White Peach (#FFE4E4)',
+                    ],
+                  },
+                  {
+                    title: 'Greens',
+                    bullets: [
+                      'Basil (#588061)',
+                      'Pistachio (#A1D6AD)',
+                      'Honeydew (#CFEFD5)',
+                      'Mint (#E5F4E8)',
+                    ],
+                  },
+                  {
+                    title: 'Neutrals',
+                    bullets: [
+                      'Milk (#FFFBF6)',
+                      'Sweet Cream (#F4EDE3)',
+                      'Charcoal (#1E1E1E)',
+                    ],
+                  },
+                  {
+                    title: 'Accents (used sparingly)',
+                    bullets: [
+                      'Sea Glass (#269BA6)',
+                      'Coastal Blue (#8BD7DF)',
+                      'Mist (#C0EBEF)',
+                      'Sky Tint (#E4F6F8)',
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'body',
+                text: "Pink was retained from the previous palette to maintain brand recognition and warmth. Green was introduced to balance the palette with natural tones that reflect Weckerly’s handmade and ingredient-driven character. The blue tones were softened and reduced to create harmony with the Rittenhouse shop’s pink interiors and overall aesthetic."
+              },
+              {
+                type: 'section-subtitle',
+                text: 'Logo and Marks',
+              },
+              {
+                type: 'body',
+                text: "A new medallion logo was created by merging elements from past and present branding, symbolizing the evolution of Weckerly’s identity. The lotus flower and wordmark were refined for versatility and clarity across applications, each with guidelines for placement and usage."
+              },
+              {
+                type: 'section-subtitle',
+                text: 'Typography',
+              },
+              {
+                type: 'body',
+                text: "This combination provides a clear hierarchy while maintaining a friendly and confident tone that reflects Weckerly’s approachable but polished identity."
+              },
+              {
+                type: 'list',
+                ordered: false,
+                items: [
+                  {
+                    title: 'Bebas Neue',
+                    bullets: [
+                      'For headers and select subheaders, always bold and all caps.',
+                    ],
+                  },
+                  {
+                    title: 'Poppins',
+                    bullets: [
+                      'For body text and small accents, used in standard capitalization or bold all caps for buttons and subheaders.',
+                    ],
+                  },
+                ],
+              },
+              { type: 'section-title', text: 'Implementation' },
+              {
+                type: 'body',
+                text: [
+                  "The new brand identity has been applied across a wide range of promotional materials, social media templates, and digital touchpoints to ensure a consistent and recognizable look. The updated colors, typography, and logo system appear throughout online platforms and marketing campaigns, strengthening Weckerly’s visual presence.",
+                  "In store, the rebrand aligns naturally with the Rittenhouse shop’s existing pink and green interior. Pink has been extended across coffee and ice cream cup stickers, in store signage, and display materials to maintain cohesion between physical and digital environments.",
+                  "Since the rebrand began rolling out in September, many key elements have already been implemented, with remaining touchpoints such as pint packaging and select legacy materials currently in progress. The goal is a complete and unified rebrand across all customer facing and operational assets."
+                ]
+              }
+            ]
+          },
+          {
+            image: jotformCover,
+            alt: 'Jotform catering UX flow',
+            title: 'Catering UX Flow',
+            preview: "Designed a dynamic Jotform that automated pricing, packaging, and logic, making catering orders clearer for customers and less work for staff.",
+            expandedContent: [
+              { type: 'section-title', text: 'The Challenge' },
+              { 
+                type: 'body',
+                text: "Weckerly’s had no streamlined way to collect catering orders for ice cream sandwich events. The process relied on email communication, which led to missing information, unclear totals, and back-and-forth between customers and staff. The system needed to be automated, user-friendly, and able to handle complex logic around pricing, packaging, and delivery."
+              },
+              { type: 'section-title', text: 'Research & Planning' },
+              { 
+                type: 'body',
+                text: "The first step was identifying friction points in the existing ordering process. Many customers were unsure about order minimums, packaging requirements, and delivery options. To address this, I mapped out an ideal user journey from the initial inquiry to payment confirmation. The focus was on simplifying decision points and automating repetitive staff tasks wherever possible."
+              },
+              { type: 'section-title', text: 'Form Design & Logic' },
+              {
+                type: 'body',
+                text: "I built a fully responsive order form in Jotform that adapts in real time based on customer input. The form collects essential event details, including the customer’s name, email, event date, guest count, allergies, and any special notes."
+              },
+              { type: 'section-subtitle', text: 'Jotform Structure Overview' },
+              {
+                type: 'body',
+                text: [
+                  "I built a fully responsive order form in Jotform that adapts in real time based on customer input. The form collects essential event details, including the customer’s name, email, event date, guest count, allergies, and any special notes.",
+                  "When users select between Mini Sandwiches or Full Sandwiches, the form automatically loads the correct menu with flavor descriptions and quantity fields. Each section calculates sandwich totals and pricing as the user fills it out, ensuring full transparency.",
+                  "The form enforces a $350 minimum order threshold and alerts users if they attempt to proceed without meeting that requirement. The form includes detailed microcopy to clarify each step, helping users understand the process without needing to contact the team directly.",
+                ]
+              },
+              { type: 'photo', src: jotform1, alt: 'Sandwich Selection' },
+              { type: 'section-subtitle', text: "Delivery & Packaging" },
+              {
+                type: 'body',
+                text: 'After the sandwich selections and totals are complete, customers are asked whether they’d like delivery or pickup. If delivery is selected, the form prompts them to enter their address and displays a note that the delivery fee will be calculated and added after review. This is the only cost calculated manually by the team, since delivery pricing depends on distance, time, and other factors. If pickup is selected, the form prompts users to choose a date from the Rittenhouse shop calendar.'
+              },
+              { type: 'photo', src: jotform2, alt: 'Delivery and pickup' },
+              { 
+                type: 'body',
+                text: [
+                  "The form then automatically calculates cooler and dry ice packaging fees based on sandwich type and order size. These fees ensure the sandwiches remain frozen for up to 24 hours, accounting for both transport and event serving conditions.",
+                ]
+              },
+              {
+                type: 'list',
+                ordered: false,
+                items: [
+                  {
+                    title: 'Coolers',
+                    bullets: ['Automatically sized to fit each order volume.'],
+                  },
+                  {
+                    title: 'Dry ice slabs',
+                    bullets: ['5" x 5" x 2", 5 lbs each, calculated with a 10 lb minimum and increasing for larger orders.'],
+                  },
+                  {
+                    title: 'Mini sandwiches',
+                    bullets: ['The form determines how many boxes are required (50 per box) and calculates the corresponding dry ice and cooler needs.'],
+                  },
+                  {
+                    title: 'Full sandwiches',
+                    bullets: ['The form estimates how many fit per cooler and adjusts the dry ice total accordingly.'],
+                  },
+                  {
+                    title: 'Packaging fees',
+                    bullets: ['Include a service and handling surcharge to cover materials and preparation.'],
+                  },
+                ],
+              },
+              {
+                type: 'body',
+                text: "Based on whether the user selected mini or full ice cream sandwiches earlier in the form, the system applies the corresponding calculation set for that type and displays the accurate packaging fee. A note above the fee specifies which type (mini or full) is being calculated to confirm that the correct logic is applied."
+              },
+              { type: 'photo', src: jotform3, alt: 'Dry ice and cooler' },
+              {
+                type: 'body',
+                text: 'The form then displays the user their estimated total based on their sandwich selection and packaging fees. Delivery is to be added by us after submission of the form, which is clearly stated on the form.'
+              },
+              { type: 'photo', src: jotform4, alt: 'Estimated totals' },
+              { type: 'section-subtitle', text: "Payment Process" },
+              {
+                type: 'body',
+                text: [
+                  "Within 24 hours of submission, the customer receives a message with their delivery fee, calculated by us. They can review and approve this total before moving forward.",
+                  "Once both sides confirm the details, a second Jotform is automatically generated and sent to the customer for payment. This form references their original order, pulling in their name, email, and estimated total along with the finalized delivery cost that we insert upon confirmation. Payment is then collected securely through that form."
+                ]
+              },
+              { type: 'photo', src: jotform5, alt: 'Payment' },
+              { type: 'section-title', text: 'Results' },
+              { 
+                type: 'body',
+                text: "The delivery and packaging flow provides customers with an accurate estimate of their order cost before confirming, including automatically calculated packaging fees and a pending delivery fee added after team review. Once the order is submitted, the catering team verifies details, adds the delivery fee, and sends a linked payment form referencing the original submission. This streamlined process keeps communication clear, ensures accurate pricing, and creates a smooth, reliable ordering experience."
+              }
+            ]
+          },
+          {
+            image: marketingAnalyticsCover,
+            alt: 'Marketing analytics',
+            title: 'Marketing Analytics',
+            preview: "Built an integrated marketing and analytics system that turned content planning and performance tracking into a scalable, data-driven workflow.",
+            expandedContent: [
+              { type: 'section-title', text: "The Challenge" },
+              {
+                type: 'body',
+                text: "The delivery and packaging flow provides customers with an accurate estimate of their order cost before confirming, including automatically calculated packaging fees and a pending delivery fee added after team review. Once the order is submitted, the catering team verifies details, adds the delivery fee, and sends a linked payment form referencing the original submission. This streamlined process keeps communication clear, ensures accurate pricing, and creates a smooth, reliable ordering experience."
+              },
+              { type: 'section-title', text: "Social Media & Marketing Calendar" },
+              {
+                type: 'body',
+                text: "A unified calendar that lays out every post, campaign, and event across Instagram, TikTok, Google, and the blog."
+              },
+              {
+                type: 'list',
+                ordered: false,
+                items: [
+                  {
+                    title: 'Content planning',
+                    bullets: ['Organizes captions, visuals, and scheduling in one place.'],
+                  },
+                  {
+                    title: 'Performance tracking',
+                    bullets: ['Links directly to live posts and analytics.'],
+                  },
+                  {
+                    title: 'Strategic alignment',
+                    bullets: ['Keeps all channels aligned under one strategy.'],
+                  },
+                ],
+              },
+              {
+                type: 'body',
+                text: "Below is a blank version of the spreadsheet showing its overall structure and layout."
+              },
+              { type: 'photo', src: marketingCalendar, alt: "Marketing calendar" },
+              { type: 'section-title', text: 'Social Media Analytics Tracker' },
+              { type: 'body', text: 'A dashboard that tracks performance and visualizes trends across all Instagram (primary platform) and Tik Tok posts.' },
+              {
+                type: 'list',
+                ordered: false,
+                items: [
+                  {
+                    title: 'Engagement metrics',
+                    bullets: ['Calculates engagement rate, reach, and impressions automatically.'],
+                  },
+                  {
+                    title: 'Content performance',
+                    bullets: ['Identifies which content types and times perform best.'],
+                  },
+                  {
+                    title: 'Growth trends',
+                    bullets: ['Highlights month-to-month growth and audience trends.'],
+                  },
+                ],
+              },
+              { type: 'body', text: "Instagram Highlights:" },
+              {
+                type: 'list',
+                ordered: false,
+                items: [
+                  {
+                    title: 'Average engagement rate: 4.08%',
+                    bullets: ['Above the industry standard of 1–3%.'],
+                  },
+                  {
+                    title: 'Top-performing post: 6.76% engagement',
+                    bullets: ['Reached more than 155,000 views.'],
+                  },
+                  {
+                    title: '10% of posts',
+                    bullets: ['Surpassed 25,000 views.'],
+                  },
+                  {
+                    title: '17% of posts',
+                    bullets: ['Reached 15,000–25,000 views.'],
+                  },
+                ],
+              },
+              { type: 'body', text: "Below is a blurred version of the analytics tracker, shown filled to demonstrate its layout, color-coding, and overall functionality while keeping data confidential." },
+              { type: 'photo', src: socialMediaAnalytics, alt: 'Social media analytics' },
+              { type: 'section-title', text: 'Google Profile Analytics Tracker' },
+              { type: 'body', text: "A spreadsheet that collects and visualizes data from Google Analytics and the business profile." },
+              {
+                type: 'list',
+                ordered: false,
+                items: [
+                  {
+                    title: 'Search and interaction tracking',
+                    bullets: ['Tracks searches, clicks, and profile interactions over time.'],
+                  },
+                  {
+                    title: 'Campaign correlation',
+                    bullets: ['Shows correlations between campaigns and search traffic.'],
+                  },
+                  {
+                    title: 'Monthly insights',
+                    bullets: ['Includes space for notes and monthly insights.'],
+                  },
+                ],
+              },
+              { type: 'body', text: "Below is a blurred version of the analytics tracker, shown filled to demonstrate its layout, color-coding, and overall functionality while keeping data confidential." },
+              { type: 'photo', src: googleProfileAnalytics, alt: "Google profile analytics" },
+              { type: 'section-title', text: 'Outcome' },
+              { type: 'body', text: "The system unified multiple reporting tools into a single, consistent process for planning, tracking, and analyzing performance." },
+              {
+                type: 'list',
+                ordered: false,
+                items: [
+                  {
+                    title: 'Simplified data interpretation',
+                    bullets: ['Simplified how data is interpreted and used to guide creative choices.'],
+                  },
+                  {
+                    title: 'Improved performance visibility',
+                    bullets: ['Improved visibility into results and performance trends.'],
+                  },
+                  {
+                    title: 'More reflective design process',
+                    bullets: ['Encouraged a more reflective, data-driven design process.'],
+                  },
+                ],
+              },
+              { type: 'body', text: "This project brought together marketing, analytics, and UX thinking. It made the creative process more intentional and gave leadership a clear understanding of what drives engagement and growth." }
+            ]
+          },
+        ],
+      },
+          { type: 'section-title', text: 'Reflection' },
+          { 
+            type: 'body', 
+            text: [
+              "My work at Weckerly's demonstrates how thoughtful systems design can transform a growing business. By integrating UX, brand strategy, and marketing operations, I created scalable frameworks that serve both immediate needs and long-term growth.",
+              "Working as the sole person in this role taught me to balance strategic thinking with hands-on execution: moving fluidly between designing accessible interfaces, building analytics dashboards, refreshing brand identity, and optimizing content performance. Each system was built to be repeatable, measurable, and human-centered.",
+              "The result is a cohesive digital ecosystem where every touchpoint (from the website to social media to catering orders) reflects Weckerly's craft-focused values while supporting the operational needs of a multi-location business. This experience reinforced my belief that the best design happens at the intersection of user needs, business goals, and creative expression."
+            ]
+          }
+    ],
   },
 ];
