@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import NavLinks from './nav-links';
-import ThemeToggle from './theme-toggle';
 import './header.css';
 
 export default function Header() {
@@ -27,7 +26,6 @@ export default function Header() {
         <div className="site-header__right">
           <div className="site-header__desktop-nav">
             <NavLinks />
-            <ThemeToggle />
           </div>
 
           <button
@@ -54,8 +52,6 @@ export default function Header() {
           onClick={(event) => event.stopPropagation()}
         >
           <div className="mobile-menu__top">
-            <ThemeToggle />
-
             <button className="mobile-menu__close" aria-label="Close menu" onClick={closeMenu}>
               <span />
               <span />
