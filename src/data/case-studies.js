@@ -28,6 +28,7 @@ import schoolDetails from '../assets/images/intealth-case-study/school-details.w
 import addSchoolNote from '../assets/images/intealth-case-study/add-school-note.webp';
 import addSchoolNoteConfirmation from '../assets/images/intealth-case-study/add-school-note-confirmation.webp';
 import sponsorNotes from '../assets/images/intealth-case-study/sponsor-notes.webp';
+import ownerCommunity from '../assets/images/intealth-case-study/owner-community.png'
 
 import weckerlysCover from '../assets/images/weckerlys-cover.webp';
 import weckerlysHero from '../assets/images/weckerlys-case-study/weckerlys-cover.gif';
@@ -71,13 +72,39 @@ import checkoutFlow from '../assets/images/petes-case-study/checkout-flow.MOV';
 import finalApplicationScreens from '../assets/images/petes-case-study/final-application-screens.png'
 
 import soupCover from '../assets/images/soup-cover.webp';
-import soupHero from '../assets/images/soup-case-study/soup-hero.gif'
+import soupHero from '../assets/images/soup-case-study/soup-hero.gif';
+import soupLogo from '../assets/images/soup-case-study/soup-logo.webp';
+import styleEssence from '../assets/images/soup-case-study/style-essence.webp';
+import users from '../assets/images/soup-case-study/users.webp';
+import forms from '../assets/images/soup-case-study/forms.webp';
+import responsive from '../assets/images/soup-case-study/responsive.webp';
+import soupWebDemo from '../assets/images/soup-case-study/soup-web-demo.MOV';
+
+import phpRecipeCookbookCover from '../assets/images/php-recipe-cookbook-case-study/php-recipe-cookbook-cover.webp';
+import phpRecipeCookbookHero from '../assets/images/php-recipe-cookbook-case-study/php-recipe-cookbook-hero.gif';
+import phpRecipeCookbookLogo from '../assets/images/php-recipe-cookbook-case-study/php-recipe-cookbook-logo.webp';
+import recipeAppDemo from '../assets/images/php-recipe-cookbook-case-study/cookbook-web-demo.mov';
+import responsiveGrid from '../assets/images/php-recipe-cookbook-case-study/responsive-grid.mov';
+import mysql from '../assets/images/php-recipe-cookbook-case-study/mysql.webp'
+
+import kamiCover from '../assets/images/kami-case-study/kami-cover.webp';
+import kamiHero from '../assets/images/kami-case-study/kami-hero.gif';
+import kamiLogo from '../assets/images/kami-case-study/kami-logo.webp';
+import kamiTruckLine from '../assets/images/kami-case-study/kami-truck-line.webp';
+import kamiWindow from '../assets/images/kami-case-study/kami-window.webp';
+import kamiCustomer from '../assets/images/kami-case-study/kami-customer.webp';
+import homepageProgression from '../assets/images/kami-case-study/homepage-progression.webp';
+import itemProgression from '../assets/images/kami-case-study/item-progression.webp';
+import bagProgression from '../assets/images/kami-case-study/bag-progression.webp';
+import paymentProgression from '../assets/images/kami-case-study/payment-progression.webp';
+import navBarProgression from '../assets/images/kami-case-study/nav-bar-progression.webp';
+
 
 export const caseStudies = [
   {
     slug: 'spell-magazine',
     title: 'Spell Magazine',
-    role: 'UX Design & Co-Creative Direction',
+    role: 'UX Design/Dev & Co-Creative Direction',
     category: 'Professional',
     coverImage: spellCover,
     skills: ['figma', 'javascript', 'github', 'react', 'typescript', 'adobe'],
@@ -311,7 +338,25 @@ export const caseStudies = [
               },
             ],
           },
+          {
+            image: ownerCommunity,
+            alt: 'Owner community transformation',
+            title: 'Owner Community UI Design',
+            preview: 'Designed and prototyped an intuitive interface for the CellixJS OwnerCommunity application while preserving existing functionality.',
+            expandedContent: [
+              { type: 'section-title', text: "Designing an Interface" },
+              {
+                type: 'body',
+                text: "OwnerCommunity is an application built for the CellixJS framework that previously relied on a backend-focused experience without an intuitive user interface. Working alongside Olivia Knestaut, I designed and prototyped screens in Figma to translate its existing functionality into a cleaner, more accessible interface. The goal was to make the application easier to navigate and understand while preserving the underlying capabilities, creating a more intuitive experience without compromising the functionality developers and users rely on."
+              }
+            ]
+          },
         ],
+      },
+      { type: 'section-title', text: 'The Solution & Result' },
+      {
+        type: 'body',
+        text: "Across these projects and others, I contributed to the design and development of multiple applications within Intealth’s Modern Apps ecosystem, including internal tools and applications that cannot be publicly shared. My work spanned UX design, front-end development, component documentation, and design-to-development workflows. From establishing shared design standards to modernizing existing interfaces and prototyping new experiences, I helped improve usability, consistency, and maintainability across applications while bridging design and development."
       }
     ],
   },
@@ -520,9 +565,136 @@ export const caseStudies = [
     category: 'Professional',
     coverImage: soupCover,
     skills: ['framer', 'adobe'],
-    logo: spellLogo,
+    logo: soupLogo,
     heroImage: soupHero,
-    blocks: [{ type: 'section-title', text: 'Case study coming soon' }],
+    blocks: [
+      { type: 'section-title', text: 'Introduction' },
+      {
+        type: 'body',
+        text: "Soup PHL is a Philadelphia-based creative events company that empowers local creatives through collaborative events, partnerships, and shared experiences. Its website serves as a central hub for discovering events, revisiting event photography, renting production equipment, and exploring opportunities to collaborate with Soup."
+      },
+      {
+        type: 'video',
+        src: soupWebDemo,
+        alt: "Soup PHL web demo",
+        width: 80,
+        autoplay: true,
+        loop: true,
+        audio: false,
+        controls: false,
+      },
+      {
+        type: 'button',
+        text: 'View Live Site',
+        href: 'https://danceforsoup.com/',
+        external: true,
+      },
+      { type: 'section-title', text: "The Challenge" },
+      {
+        type: 'body',
+        text: 
+        [
+          "The website needed to accommodate several distinct audiences, each with different goals, while maintaining Soup’s expressive, unconventional brand identity. From first-time visitors discovering events to businesses seeking equipment rentals or long-term partnerships, each user needed a clear, intuitive path to their desired outcome.",
+          "The challenge was balancing these functional needs with the bold typography, bright colors, movement, and playful interactions that define Soup. The result needed to feel unmistakably like the brand without allowing its visual energy to interfere with usability."
+        ]
+      },
+      {
+        type: 'expansion-cards',
+        cards: [
+          {
+            image: styleEssence,
+            title: 'Eclectic but Intuitive Design',
+            preview: 'A cohesive visual system preserves Soup’s bold personality while keeping the experience usable.',
+            expandedContent: [
+              {
+                type: 'body',
+                text: [
+                  "Soup’s visual identity thrives on bold colors, oversized typography, playful characters, and movement. Working closely with founders Remy and Ollie, I developed a web design direction that preserved this personality while establishing a more cohesive and usable visual system.",
+                  "The color palette combines three bright brand colors, mint (#A7EBE7), yellow (#FFF178), and orange (#EE5C2D), with near-black (#1A1A1A) and off-white (#FFFEF5) for balance. I distributed these colors throughout the interface to maintain visual energy without overwhelming the content, while ensuring sufficient contrast for text and interactive elements.",
+                  "Moving graphics and interactive details make the site engaging to explore, but remain secondary to the user’s primary task. Through repeated design reviews with the founders and informal usability testing, I refined the experience to ensure that the expressive design never came at the expense of usability.",
+                ],
+              },
+            ],
+          },
+          {
+            image: users,
+            title: 'Designing for Every Audience',
+            preview: 'Audience-specific pathways help visitors discover events, rent equipment, and explore partnerships.',
+            expandedContent: [
+              {
+                type: 'body',
+                text: "Through conversations with founders Remy and Ollie, along with observations at Soup events and behind the scenes, I identified four primary audience groups with distinct goals.",
+              },
+              {
+                type: 'list',
+                ordered: false,
+                items: [
+                  {
+                    label: 'The Discoverer',
+                    text: 'First-time visitors exploring Philadelphia events need an easy way to understand what Soup does and find upcoming events that interest them.',
+                  },
+                  {
+                    label: 'The Regular Attendee',
+                    text: 'Returning fans want to keep up with upcoming events and revisit past experiences. Event listings provide ticket-purchasing options when presales are available, while non-ticketed events include a Google Calendar link with event details preloaded. Event photography also lets attendees revisit shows and find photos from past events.',
+                  },
+                  {
+                    label: 'The Equipment Renter',
+                    text: 'Individuals, event organizers, and businesses need a straightforward way to request speakers, lighting, microphones, and other equipment. The inquiry process also accommodates requests for setup, technical support, and teardown assistance.',
+                  },
+                  {
+                    label: 'The Collaboration Partner',
+                    text: "Brands and organizations seeking to co-host events or establish ongoing partnerships need a clear way to explore opportunities with Soup. Guided inquiry questions help founders understand potential partners' goals, event needs, and expectations before an initial meeting.",
+                  },
+                ],
+              },
+              {
+                type: 'body',
+                text: "Together, these pathways support Soup's mission of empowering collaborators and connecting Philadelphia's creative community through meaningful events.",
+              },
+            ],
+          },
+          {
+            image: forms,
+            title: 'Purposeful Inquiry & Data Collection',
+            preview: 'Purpose-built forms collect the context founders need to evaluate rentals and partnerships.',
+            expandedContent: [
+              {
+                type: 'body',
+                text: [
+                  "Equipment rentals and collaborative partnerships require more context than a standard contact form can provide. I worked directly with the founders to identify the information they need to evaluate inquiries, understand project requirements, and prepare for an initial conversation.",
+                  "The rental form gathers relevant details about equipment needs, rental duration, and additional technical support. The partnership form focuses on the potential collaborator, their goals, and the type of event or relationship they envision. Both forms balance collecting useful information with keeping the submission process approachable.",
+                  "Submitted inquiries are delivered directly to the founders' email inboxes, allowing them to review requests and follow up efficiently. By establishing a clear first point of contact, the forms help Soup assess opportunities and understand prospective clients before investing time in more detailed discussions.",
+                ],
+              },
+            ],
+          },
+          {
+            image: responsive,
+            title: 'Responsive Experience',
+            preview: 'Responsive layouts keep Soup’s personality and important actions accessible on every device.',
+            expandedContent: [
+              {
+                type: 'body',
+                text: [
+                  "The website needed to maintain its visual character and functionality across desktop, tablet, and mobile devices. I adapted layouts, typography, spacing, and interactive elements to accommodate smaller screens without stripping away the personality that makes the experience distinctly Soup.",
+                  "On mobile, navigation and content remain easy to access, forms remain manageable to complete, and important actions do not depend on desktop-only hover states. Interactive details were adapted to work across different screen sizes and input methods, keeping the experience engaging without compromising usability.",
+                  "The result is a consistent experience that allows visitors to discover events, explore photography, submit rental requests, and inquire about partnerships regardless of the device they use.",
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      { type: 'section-title', text: 'The Solution' },
+      {
+        type: 'body',
+        text: "The final website brings Soup PHL's brand and business needs together in one cohesive digital experience. It combines an expressive visual identity with clear pathways for event discovery, ticketing, photography, equipment rentals, and collaborative partnerships.",
+      },
+      {
+        type: 'body',
+        text: "By pairing a playful interface with audience-specific navigation, purposeful inquiry forms, and responsive layouts, the site gives each visitor a clear way to engage with Soup while preserving the creative energy that defines the company.",
+      },
+    ],
   },
   {
     slug: 'weckerlys-ice-cream',
@@ -1019,4 +1191,196 @@ export const caseStudies = [
           }
     ],
   },
+  {
+    slug: 'php-recipe-cookbook',
+    title: 'PHP Recipe Cookbook',
+    role: 'Full Stack Development',
+    category: 'Class Project',
+    coverImage: phpRecipeCookbookCover,
+    skills: ['figma', 'html', 'css', 'javascript', 'php', 'mysql'],
+    logo: phpRecipeCookbookLogo,
+    heroImage: phpRecipeCookbookHero,
+    blocks: [
+      { type: 'section-title', text: 'Overview' },
+      {
+        type: 'body',
+        text: "In this project, I built an online cookbook with PHP, MySQL, HTML, CSS, JavaScript, and Git. The goal was to transform a large collection of recipe content into a responsive, database-driven application where users could browse, search, and filter recipes. I practiced my existing design and front-end skills while learning how to work with data and a back end, including structuring a database, building dynamic templates, and connecting a front-end interface to live data.",
+      },
+      {
+        type: 'video',
+        src: recipeAppDemo,
+        alt: "PHP Recipe Cookbook app demo",
+        width: 80,
+        autoplay: true,
+        loop: true,
+        audio: false,
+        controls: false,
+      },
+      {
+        type: 'button',
+        text: 'View Cookbook Build',
+        href: 'https://digmstudents.westphal.drexel.edu/~igb34/',
+        external: true,
+      },
+      { type: 'section-title', text: 'Context & Challenge' },
+      {
+        type: 'body',
+        text: "This project was created for my IDM232 Web Scripting II class. The assignment required building a self-hosted recipe application entirely from scratch using PHP and MySQL. As someone with stronger experience in design and front-end coding, my biggest challenge was becoming more confident with back-end systems: creating a database, writing SQL queries, structuring dynamic PHP pages, and handling search and filtering functionality.",
+      },
+      {
+        type: 'body',
+        text: "The primary goal was to integrate the front end and back end by turning static recipe PDFs and images into a functioning application. Success meant that every recipe loaded dynamically, all content displayed properly from the database, and the interface remained clean, usable, and responsive across devices.",
+      },
+      {
+        type: 'video',
+        src: responsiveGrid,
+        alt: "PHP Recipe Cookbook responsive grid layout",
+        width: 80,
+        autoplay: true,
+        loop: true,
+        audio: false,
+        controls: false,
+      },
+      { type: 'section-title', text: 'Process & Insight' },
+      {
+        type: 'body',
+        text: [
+          "After organizing recipe PDFs and images into a structured spreadsheet, I designed the front end first, establishing the overall layout, visual style, and card and grid structure before connecting dynamic content.",
+          "Once the structure was in place, I exported the spreadsheet as a CSV and moved into back-end development. Using MAMP, I connected to a local server environment and imported the CSV into phpMyAdmin, creating a database table with an auto-incrementing ID. I then set up the PHP database connection and began pulling content onto the site.",
+          "With the database connected, I tested how recipe data displayed on each page. This became an iterative cycle of adjusting PHP queries, refining how data was extracted, updating phpMyAdmin records, and styling each page for clarity. I also optimized the provided images and converted them to WebP, then updated the database so the correct file paths were used.",
+          "After beta feedback, I improved the search and filtering functionality. The initial search checked only a few database columns, so I expanded the search logic to cover all relevant fields and reorganized the protein filters into a more intuitive system.",
+        ],
+      },
+      { type: 'photo', src: mysql, alt: 'Database snippet' },
+      { type: 'section-title', text: 'The Solution' },
+      {
+        type: 'body',
+        text: "Through continuous refinement, I built a dynamic cookbook with recipes stored and served from MySQL. Users can search by keyword, filter recipes by protein type, and view detailed pages with hero images, ingredient lists, and step-by-step instructions with corresponding photos. The site is responsive across devices and structured so new recipes or updates can be added directly through the database.",
+      },
+      {
+        type: 'body',
+        text: "This project successfully met all requirements and strengthened my technical foundation in PHP, databases, SQL queries, server environments, and the connection between back-end architecture and user experience. If I continued the project, I would expand its filtering features and add user-driven functionality such as saved recipes and dietary tags.",
+      },
+    ],
+  },
+  {
+    slug: 'kami',
+    title: 'Kami',
+    role: 'UX Research & Design',
+    category: 'Class Project',
+    coverImage: kamiCover,
+    skills: ['figma', 'javascript', 'github', 'react', 'typescript', 'adobe'],
+    logo: kamiLogo,
+    heroImage: kamiHero,
+    blocks: [
+      { type: 'section-title', text: 'Introduction'},
+      { 
+        type: 'body',
+        text: "Kami is a popular Korean food truck outside Drexel University’s library, known for fast service and its unique presence in University City. Over ten weeks, our team of five designed a hypothetical mobile ordering app to bring Kami’s efficient, personable experience to a digital platform."
+      },
+      { type: 'section-title', text: 'Context & Challenge'},
+      {
+        type: 'body',
+        text: "Kami serves students, staff, and nearby workers, many ordering between classes. Despite its efficiency, long lines, hard-to-find hours, and a difficult-to-scan physical menu create friction around pricing, customizations, and dietary needs. Our goal was to streamline ordering while preserving Kami’s approachable feel, improving menu clarity, and supporting repeat customers."
+      },
+      { type: 'section-title', text: "Research & Insights" },
+      {
+        type: 'body',
+        text: "Through on-site observations and brief customer interviews, we found that speed and clarity were central to the ordering experience. Customers rarely waited more than ten minutes, and staff actively guided them through customizations. These insights shaped our design priorities, while close team collaboration and repeated usability testing helped us refine the experience within the project’s ten-week timeline."
+      },
+      {
+        type: 'grid',
+        rows: 1,
+        columns: 3,
+        photos: [
+          { src: kamiTruckLine, alt: 'Kami truck line' },
+          { src: kamiWindow, alt: 'Kami window' },
+          { src: kamiCustomer, alt: 'Kami customer' },
+        ],
+      },
+      { type: 'section-title', text: 'Design Evolution' },
+      {
+        type: 'body',
+        text: "As we moved from wireframes to higher-fidelity prototypes, we conducted iterative usability testing to identify moments of confusion and hesitation. The following progressions highlight how direct user feedback shaped key screens across the app."
+      },
+      { type: 'section-subtitle', text: 'Homepage Progression' },
+      { type: 'photo', src: homepageProgression, alt: 'Homepage progression lo fi to hi fi'},
+      {
+        type: 'body',
+        text: "During mid-fidelity testing, users found the dark background distracting and the homepage overwhelming, citing small images, unclear pricing, and missing actions. One user asked, “I see the items… what do I do with them?” We simplified the layout, enlarged images, surfaced pricing, and added clear Customize and Add to Bag buttons. The final homepage resolved all critical usability issues and received strong user satisfaction."
+      },
+      { type: 'section-subtitle', text: 'Item Progression' },
+      { type: 'photo', src: itemProgression, alt: 'Item progression lo fi to hi fi'},
+      {
+        type: 'body',
+        text: "Usability testing revealed issues with allergen visibility, add-on selection, and customization flow. We enlarged and emphasized allergen information, replaced radio buttons with checkboxes to support multiple selections, and moved the quantity and Add button to a sticky bottom position to reduce scrolling and create a clearer user experience."
+      },
+      { type: 'section-subtitle', text: 'Bag Progression' },
+      { type: 'photo', src: bagProgression, alt: 'Bag progression lo fi to hi fi'},
+      {
+        type: 'body',
+        text: "Low-fidelity testing revealed that the add-on pop-up obstructed checkout and felt pushy, so we removed it. After users expressed interest in suggested sides and drinks, we reintroduced add-ons as an inline section that did not interrupt checkout. Testing also revealed low contrast and a hard-to-find order total, leading us to improve contrast and reposition the total beneath the item list in High Fidelity 2."
+      },
+      { type: 'section-subtitle', text: 'Payment Progression' },
+      { type: 'photo', src: paymentProgression, alt: 'Payment progression lo fi to hi fi'},
+      {
+        type: 'body',
+        text: "The navigation icons reflect Kami’s branding and in-person experience, including a favorite corn dog, the brand’s duck, and the paper bags used for orders. Although users appreciated their personality, testing revealed unclear meanings. We added text labels for clarity, changed the active state to a square to fit both icon and label, and added a dark border to separate the navigation bar from light backgrounds."
+      },
+      { type: 'section-title', text: "The Solution" },
+      {
+        type: 'text',
+        text: [
+          "The prototyped design is a mobile ordering app centered on speed, clarity, and recognition.",
+          "Key features include:"
+        ]
+      },
+      {
+        type: 'list',
+        ordered: false,
+        compact: true,
+        items: [
+          {
+            title: 'A simple three-tab navigation system',
+            bullets: [],
+            plain: true,
+          },
+          {
+            title: 'A clearly organized menu separating mains, sides, drinks, and add-ons',
+            bullets: [],
+            plain: true,
+          },
+          {
+            title: 'Early visibility of pricing, dietary notes, and customization options',
+            bullets: [],
+            plain: true,
+          },
+          {
+            title: 'Favorites and past orders for quick repeat ordering',
+            bullets: [],
+            plain: true,
+          },
+          {
+            title: 'Account features supporting efficiency and loyalty',
+            bullets: [],
+            plain: true,
+          },
+        ],
+      },
+      {
+        type: 'iframe',
+        src: 'https://embed.figma.com/proto/FBqXhSFBrihsm1PLOO3aGp/kami-food-truck?node-id=1489-8633&viewport=1084%2C-765%2C0.19&t=SKknAPew54qyxAf6-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1293%3A5048&page-id=1197%3A2704&embed-host=share',
+        title: 'Kami food truck mobile app Figma prototype',
+      },
+      { type: 'section-title', text: "Conclusion & Results" },
+      {
+        type: 'body', 
+        text: 
+        [
+          "The high fidelity prototype successfully translates Kami’s fast, personable service into a clear and efficient digital ordering experience. Usability testing showed improved clarity across the menu, item customization, cart, and payment flows compared to early iterations.",
+          "Given the ten-week timeline of this project, the team and I identified several opportunities for further refinement with more time. We would expand microinteractions to polish feedback and flow throughout the app, introduce a rewards system to better support frequent customers and encourage repeat use, and continue testing alternative menu layouts to better understand user preferences and improve scanability."
+        ]
+      },
+    ]
+  }
 ];

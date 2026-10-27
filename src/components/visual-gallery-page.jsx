@@ -46,6 +46,7 @@ export default function VisualGalleryPage({ galleryKey, showTitle = true }) {
       .filter((item) => item && item.file)
       .map((item) => {
         const src = resolveImageSrc(folder, item.file);
+        const itemTags = item.tags ?? item.tag ?? [];
 
         return {
           id: item.file,
@@ -54,6 +55,7 @@ export default function VisualGalleryPage({ galleryKey, showTitle = true }) {
           title: item.title || altFromFileName(fileNameFromPath(item.file)),
           dimensions: item.dimensions || '',
           mediums: item.mediums || [],
+          tags: Array.isArray(itemTags) ? itemTags : [itemTags],
         };
       })
       .filter((image) => image.src);
@@ -145,11 +147,11 @@ export default function VisualGalleryPage({ galleryKey, showTitle = true }) {
                 </p>
               ) : null}
 
-              {selectedImage.mediums.length > 0 ? (
+              {selectedImage.mediums.length + selectedImage.tags.length > 0 ? (
                 <div className="visual-gallery-modal__badges">
-                  {selectedImage.mediums.map((medium) => (
-                    <span key={medium} className="visual-gallery-modal__badge">
-                      {medium}
+                  {[...selectedImage.mediums, ...selectedImage.tags].map((tag) => (
+                    <span key={tag} className="visual-gallery-modal__badge">
+                      {tag}
                     </span>
                   ))}
                 </div>
