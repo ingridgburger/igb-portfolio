@@ -2,6 +2,10 @@ import { useState } from 'react';
 import { useTheme } from '../context/theme-context';
 import newTabIconLight from '../assets/images/icons/new-tab-icon-light.png';
 import newTabIconDark from '../assets/images/icons/new-tab-icon-dark.png';
+import professionalImage from '../assets/images/professional.webp';
+import educationImage from '../assets/images/education.webp';
+import skillsImage from '../assets/images/skills.webp';
+import awardImage from '../assets/images/award.webp';
 import Button from '../components/button';
 import './resume.css';
 
@@ -96,38 +100,46 @@ const AWARDS = [
 	'Westphal Portfolio Scholarship',
 ];
 
-function ResumeSection({ id, title, isOpen, onToggle, children }) {
+function ResumeExpansionCard({ id, title, preview, image, isOpen, onToggle, large = false, children }) {
 	return (
-		<section className={`resume__section ${isOpen ? 'is-open' : ''}`}>
-			<h2 className="resume__section-title">
-				<button
-					className="resume__trigger text-h3"
-					onClick={() => onToggle(id)}
-					aria-expanded={isOpen}
-					aria-controls={`resume-panel-${id}`}
-					id={`resume-trigger-${id}`}
-				>
-					<span>{title}</span>
-					<span className="resume__plus" aria-hidden="true" />
-				</button>
-			</h2>
-
+		<article className={`resume__card ${large ? 'resume__card--large' : 'resume__card--regular'} ${isOpen ? 'is-open' : ''}`}>
+			<button
+				className="resume__card-summary"
+				type="button"
+				onClick={() => onToggle(id)}
+				aria-expanded={isOpen}
+				aria-controls={`resume-panel-${id}`}
+				id={`resume-trigger-${id}`}
+			>
+				<img className="resume__card-image" src={image} alt="" />
+				<h2 className="text-h2">{title}</h2>
+				<span className="resume__card-preview">{preview}</span>
+			</button>
 			<div
-				className="resume__panel"
+				className="resume__card-content-wrap"
 				id={`resume-panel-${id}`}
 				role="region"
 				aria-labelledby={`resume-trigger-${id}`}
 			>
-				<div className="resume__panel-inner">{children}</div>
+				<div className="resume__card-content">{children}</div>
 			</div>
-		</section>
+			<button
+				className="resume__card-expand"
+				type="button"
+				onClick={() => onToggle(id)}
+				aria-expanded={isOpen}
+				aria-controls={`resume-panel-${id}`}
+			>
+				{isOpen ? 'COLLAPSE' : 'EXPAND'} <span aria-hidden="true">⌄</span>
+			</button>
+		</article>
 	);
 }
 
 export default function ResumePage() {
 	const [openSectionId, setOpenSectionId] = useState('');
 	const { theme } = useTheme();
-	const newTabIcon = theme === 'light' ? newTabIconLight : newTabIconDark;
+	const newTabIcon = theme === 'light' ? newTabIconDark : newTabIconLight;
 
 	const toggleSection = (id) => {
 		setOpenSectionId((current) => (current === id ? '' : id));
@@ -153,11 +165,13 @@ export default function ResumePage() {
 				</Button>
 			</header>
 
-			<div className="resume-page__accordion">
-
-                <ResumeSection
+			<div className="resume-page__cards">
+				<ResumeExpansionCard
 					id="experience"
 					title="Professional Experience"
+					preview="UX design, development, and creative direction"
+					image={professionalImage}
+					large
 					isOpen={openSectionId === 'experience'}
 					onToggle={toggleSection}
 				>
@@ -183,15 +197,18 @@ export default function ResumePage() {
 							</article>
 						))}
 					</div>
-				</ResumeSection>
+				</ResumeExpansionCard>
                 
-				<ResumeSection
+				<ResumeExpansionCard
 					id="education"
 					title="Education"
+					preview="User Experience & Interaction Design at Drexel University"
+					image={educationImage}
+					large
 					isOpen={openSectionId === 'education'}
 					onToggle={toggleSection}
 				>
-					<h3 className="resume__entry-title">BS in User Experience & Interaction Design</h3>
+					<h2 className="resume__entry-title">BS in User Experience & Interaction Design</h2>
 					<p className="resume__entry-subtitle">
 						Antoinette Westphal College of Art and Design, Drexel University
 					</p>
@@ -207,36 +224,64 @@ export default function ResumePage() {
 							<li key={item}>{item}</li>
 						))}
 					</ul>
-				</ResumeSection>
+				</ResumeExpansionCard>
 
-				<ResumeSection
+				<ResumeExpansionCard
 					id="skills"
 					title="Technical Skills"
+					image={skillsImage}
 					isOpen={openSectionId === 'skills'}
 					onToggle={toggleSection}
 				>
-					<div className="resume__skills-stack">
-						{TECHNICAL_SKILLS.map((group) => (
-							<p key={group.category} className="resume__skill-line">
-								<strong>{group.category}:</strong> {group.values}
-							</p>
-						))}
-					</div>
-				</ResumeSection>
+						<div className="resume__skills-stack">
+							{TECHNICAL_SKILLS.map((group) => (
+								<p key={group.category} className="resume__skill-line">
+									<strong>{group.category}:</strong> {group.values}
+								</p>
+							))}
+						</div>
+				</ResumeExpansionCard>
 
-				<ResumeSection
+				<ResumeExpansionCard
 					id="awards"
 					title="Awards"
+					image={awardImage}
 					isOpen={openSectionId === 'awards'}
 					onToggle={toggleSection}
 				>
-					<ul className="resume__list">
-						{AWARDS.map((award) => (
-							<li key={award}>{award}</li>
-						))}
-					</ul>
-				</ResumeSection>
+						<ul className="resume__list">
+							{AWARDS.map((award) => (
+								<li key={award}>{award}</li>
+							))}
+						</ul>
+				</ResumeExpansionCard>
 			</div>
+
+			<form
+				className="resume__contact-form"
+				action="https://script.google.com/macros/s/AKfycby6FpxZZA20aeqSHw4sbt7KAILOu5_mmXSUUmnmAF-c6Iu32qTDm0e8FQ_Obgc4Jahh/exec"
+				method="post"
+			>
+				<h2 className="text-h2">Get in touch</h2>
+				<p className="resume__contact-intro">
+					Feel free to reach out about potential projects, work opportunities, questions, or just to connect!
+				</p>
+				<div className="resume__contact-fields">
+					<label className="resume__contact-field">
+						<span>Name</span>
+						<input type="text" name="name" placeholder="Your name" autoComplete="name" required />
+					</label>
+					<label className="resume__contact-field">
+						<span>Email</span>
+						<input type="email" name="email" placeholder="you@gmail.com" autoComplete="email" required />
+					</label>
+					<label className="resume__contact-field resume__contact-field--message">
+						<span>Message <em>(optional)</em></span>
+						<textarea name="message" placeholder="Write your message" rows="5" />
+					</label>
+				</div>
+				<Button type="submit">Send message</Button>
+			</form>
 		</section>
 	);
 }

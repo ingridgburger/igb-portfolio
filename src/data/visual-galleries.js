@@ -1,7 +1,7 @@
 export const visualGalleries = {
   'fine-arts': {
     title: 'FINE ARTS',
-    blurb: 'This collection showcases a range of mediums, including drawing, painting, and mixed media projects. It features both conceptual and technically-driven art pieces to highlight a blend of creativity and skill.',
+    blurb: 'This collection showcases a range of artwork across drawing, painting, and mixed media, featuring both conceptual and technically driven pieces.',
     folder: 'fine-arts',
     layout: 'four-three-two',
     images: [
@@ -30,7 +30,7 @@ export const visualGalleries = {
   },
   'editorial-design': {
     title: 'EDITORIAL DESIGN',
-    blurb: 'A selection of editorial compositions focused on narrative pacing, typography, and visual hierarchy.',
+    blurb: 'This collection showcases editorial spreads designed in Adobe InDesign for Spell Magazine, featuring artwork submitted by contributing artists.',
     folder: 'editorial-design',
     layout: 'three-three-one',
     images: [
@@ -63,7 +63,7 @@ export const visualGalleries = {
   'poster-design': {
     title: 'POSTER DESIGN',
     blurb:
-      'This collection showcases a range of posters made in Adobe Photoshop and Illustrator. These posters were made as personal design projects and are not meant for commercial use or distribution.',
+      'This collection showcases a range of posters created in Adobe Photoshop and Illustrator as personal design projects not intended for commercial use or distribution.',
     folder: 'poster-design',
     layout: 'four-three-two',
     images: [

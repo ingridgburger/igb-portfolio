@@ -4,6 +4,7 @@ import HomePage from './pages/Home.jsx';
 import ResumePage from './pages/resume';
 import CaseStudiesPage from './pages/case-studies';
 import VisualArtsPage from './pages/visual-arts';
+import AboutPage from './pages/about';
 import ViewportScrollShadow from './components/viewport-scroll-shadow';
 import BackToTop from './components/back-to-top';
 import CaseStudyPage from './pages/case-study-page';
@@ -34,7 +35,7 @@ function App() {
             <Route path="/case-studies" element={<CaseStudiesPage />} />
             <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
             <Route path="/visual-arts" element={<VisualArtsPage />} />
-            <Route path="/about" element={<PlaceholderPage title="About Me" />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="*" element={<PlaceholderPage title="Page Not Found" />} />
           </Routes>
         </main>
