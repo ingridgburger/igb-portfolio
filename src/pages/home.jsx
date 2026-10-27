@@ -67,7 +67,7 @@ export default function HomePage() {
 				Designing thoughtful experiences from concept to code.
 			</p>
 
-			<Button as="a" href="/case-studies" className="hero__cta text-h4">
+			<Button as="a" href="/case-studies" className="hero__cta text-h4" arrow>
 				Explore Work
 			</Button>
 

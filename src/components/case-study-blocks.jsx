@@ -130,7 +130,7 @@ export function CarouselBlock({ block }) {
 export function ButtonBlock({ block }) {
   return (
     <div className="case-study-block__button">
-      <Button as="a" href={block.href} target={block.external ? '_blank' : undefined} rel={block.external ? 'noopener noreferrer' : undefined}>
+      <Button as="a" href={block.href} arrow target={block.external ? '_blank' : undefined} rel={block.external ? 'noopener noreferrer' : undefined}>
         {block.text}
       </Button>
     </div>

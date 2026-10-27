@@ -40,6 +40,52 @@
 	opacity: 0.55;
 }
 
+.button--arrow {
+	position: relative;
+	width: 180px;
+	height: 40px;
+	padding: 8px 24px;
+	box-sizing: border-box;
+	border-width: 2px;
+	white-space: nowrap;
+	overflow: hidden;
+	transition: width 220ms ease, transform 180ms ease;
+}
+
+.button--arrow:hover,
+.button--arrow:focus-visible {
+	transform: translateY(-2px);
+	outline: none;
+}
+
+.button--arrow:hover,
+.button--arrow:focus-visible {
+	width: 220px;
+}
+
+.button__arrow {
+	display: inline-block;
+	flex: 0 0 0;
+	width: 0;
+	height: 20px;
+	margin-left: 0;
+	overflow: hidden;
+	opacity: 0;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 20px;
+	white-space: nowrap;
+	transition: width 220ms ease, margin-left 220ms ease, opacity 120ms ease;
+}
+
+.button--arrow:hover .button__arrow,
+.button--arrow:focus-visible .button__arrow {
+	flex-basis: 20px;
+	width: 20px;
+	margin-left: var(--space-1);
+	opacity: 1;
+}
+
 .button__icon {
 	display: inline-flex;
 	align-items: center;

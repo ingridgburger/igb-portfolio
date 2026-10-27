@@ -5,10 +5,11 @@ export default function Button({
 	children,
 	icon,
 	iconPosition = 'left',
+	arrow = false,
 	className = '',
 	...props
 }) {
-	const buttonClassName = ['button', className].filter(Boolean).join(' ');
+	const buttonClassName = ['button', arrow && 'button--arrow', className].filter(Boolean).join(' ');
 	const iconElement = icon ? (
 		<span className="button__icon" aria-hidden="true">
 			{icon}
@@ -20,6 +21,7 @@ export default function Button({
 			{iconPosition === 'left' && iconElement}
 			<span className="button__label">{children}</span>
 			{iconPosition === 'right' && iconElement}
+			{arrow && <span className="button__arrow" aria-hidden="true">→</span>}
 		</Component>
 	);
 }
