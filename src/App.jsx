@@ -1,6 +1,6 @@
 import Header from './components/header';
 import Footer from './components/footer';
-import HomePage from './pages/Home.jsx';
+import HomePage from './pages/home.jsx';
 import ResumePage from './pages/resume';
 import CaseStudiesPage from './pages/case-studies';
 import VisualArtsPage from './pages/visual-arts';
