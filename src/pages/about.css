@@ -170,6 +170,7 @@
 	.about-page__socials {
 		flex-wrap: nowrap;
 		gap: 6px;
+		justify-content: center;
 	}
 
 	.about-page__social-button {
