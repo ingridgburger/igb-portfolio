@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTheme } from '../context/theme-context';
 import Button from '../components/button';
+import ContactForm from '../components/contact-form';
 import portraitImage from '../assets/images/igb-portrait.webp';
 import productImage from '../assets/images/figma-to-dev.webp';
 import chainmailedImage from '../assets/images/chainmailed.webp';
@@ -165,6 +166,7 @@ export default function AboutPage() {
 					))}
 				</div>
 			</div>
+			<ContactForm />
 		</section>
 	);
 }

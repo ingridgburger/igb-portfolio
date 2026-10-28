@@ -14,11 +14,29 @@
   flex-direction: column;
 }
 
-.case-study-page__hero > img {
+.case-study-page__hero picture,
+.case-study-page__hero picture img {
   display: block;
   width: 100%;
+}
+
+.case-study-page__hero picture img {
   max-height: 70vh;
   object-fit: cover;
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .case-study-page__hero picture img {
+    max-height: none;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 600px) {
+  .case-study-page__hero picture img {
+    max-height: none;
+    object-fit: contain;
+  }
 }
 
 .case-study-page__back-button {

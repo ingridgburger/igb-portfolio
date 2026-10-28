@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useTheme } from '../context/theme-context';
 import newTabIconLight from '../assets/images/icons/new-tab-icon-light.png';
 import newTabIconDark from '../assets/images/icons/new-tab-icon-dark.png';
@@ -7,6 +6,7 @@ import educationImage from '../assets/images/education.webp';
 import skillsImage from '../assets/images/skills.webp';
 import awardImage from '../assets/images/award.webp';
 import Button from '../components/button';
+import ContactForm from '../components/contact-form';
 import './resume.css';
 
 const EDUCATION_POINTS = [
@@ -100,50 +100,21 @@ const AWARDS = [
 	'Westphal Portfolio Scholarship',
 ];
 
-function ResumeExpansionCard({ id, title, preview, image, isOpen, onToggle, large = false, children }) {
+function ResumeCard({ title, image, large = false, children }) {
 	return (
-		<article className={`resume__card ${large ? 'resume__card--large' : 'resume__card--regular'} ${isOpen ? 'is-open' : ''}`}>
-			<button
-				className="resume__card-summary"
-				type="button"
-				onClick={() => onToggle(id)}
-				aria-expanded={isOpen}
-				aria-controls={`resume-panel-${id}`}
-				id={`resume-trigger-${id}`}
-			>
+		<article className={`resume__card ${large ? 'resume__card--large' : 'resume__card--regular'}`}>
+			<div className="resume__card-summary">
 				<img className="resume__card-image" src={image} alt="" />
 				<h2 className="text-h2">{title}</h2>
-				<span className="resume__card-preview">{preview}</span>
-			</button>
-			<div
-				className="resume__card-content-wrap"
-				id={`resume-panel-${id}`}
-				role="region"
-				aria-labelledby={`resume-trigger-${id}`}
-			>
-				<div className="resume__card-content">{children}</div>
 			</div>
-			<button
-				className="resume__card-expand"
-				type="button"
-				onClick={() => onToggle(id)}
-				aria-expanded={isOpen}
-				aria-controls={`resume-panel-${id}`}
-			>
-				{isOpen ? 'COLLAPSE' : 'EXPAND'} <span aria-hidden="true">⌄</span>
-			</button>
+			<div className="resume__card-content">{children}</div>
 		</article>
 	);
 }
 
 export default function ResumePage() {
-	const [openSectionId, setOpenSectionId] = useState('');
 	const { theme } = useTheme();
 	const newTabIcon = theme === 'light' ? newTabIconDark : newTabIconLight;
-
-	const toggleSection = (id) => {
-		setOpenSectionId((current) => (current === id ? '' : id));
-	};
 
 	return (
 		<section className="resume-page">
@@ -155,7 +126,7 @@ export default function ResumePage() {
 				<Button
 					as="a"
 					className="resume-page__pdf-button text-h4"
-					href="https://example.com"
+					href="https://drive.google.com/file/d/1QFmclH9uEEG7cG1lquBK5PylGyNziYUo/view?usp=sharing"
 					target="_blank"
 					rel="noopener noreferrer"
 					icon={<img src={newTabIcon} alt="" />}
@@ -166,14 +137,10 @@ export default function ResumePage() {
 			</header>
 
 			<div className="resume-page__cards">
-				<ResumeExpansionCard
-					id="experience"
+				<ResumeCard
 					title="Professional Experience"
-					preview="UX design, development, and creative direction"
 					image={professionalImage}
 					large
-					isOpen={openSectionId === 'experience'}
-					onToggle={toggleSection}
 				>
 					<div className="resume__experience-stack">
 						{EXPERIENCE.map((job) => (
@@ -197,16 +164,12 @@ export default function ResumePage() {
 							</article>
 						))}
 					</div>
-				</ResumeExpansionCard>
+				</ResumeCard>
                 
-				<ResumeExpansionCard
-					id="education"
+				<ResumeCard
 					title="Education"
-					preview="User Experience & Interaction Design at Drexel University"
 					image={educationImage}
 					large
-					isOpen={openSectionId === 'education'}
-					onToggle={toggleSection}
 				>
 					<h2 className="resume__entry-title">BS in User Experience & Interaction Design</h2>
 					<p className="resume__entry-subtitle">
@@ -224,14 +187,11 @@ export default function ResumePage() {
 							<li key={item}>{item}</li>
 						))}
 					</ul>
-				</ResumeExpansionCard>
+				</ResumeCard>
 
-				<ResumeExpansionCard
-					id="skills"
+				<ResumeCard
 					title="Technical Skills"
 					image={skillsImage}
-					isOpen={openSectionId === 'skills'}
-					onToggle={toggleSection}
 				>
 						<div className="resume__skills-stack">
 							{TECHNICAL_SKILLS.map((group) => (
@@ -240,48 +200,21 @@ export default function ResumePage() {
 								</p>
 							))}
 						</div>
-				</ResumeExpansionCard>
+				</ResumeCard>
 
-				<ResumeExpansionCard
-					id="awards"
+				<ResumeCard
 					title="Awards"
 					image={awardImage}
-					isOpen={openSectionId === 'awards'}
-					onToggle={toggleSection}
 				>
 						<ul className="resume__list">
 							{AWARDS.map((award) => (
 								<li key={award}>{award}</li>
 							))}
 						</ul>
-				</ResumeExpansionCard>
+				</ResumeCard>
 			</div>
 
-			<form
-				className="resume__contact-form"
-				action="https://script.google.com/macros/s/AKfycby6FpxZZA20aeqSHw4sbt7KAILOu5_mmXSUUmnmAF-c6Iu32qTDm0e8FQ_Obgc4Jahh/exec"
-				method="post"
-			>
-				<h2 className="text-h2">Get in touch</h2>
-				<p className="resume__contact-intro">
-					Feel free to reach out about potential projects, work opportunities, questions, or just to connect!
-				</p>
-				<div className="resume__contact-fields">
-					<label className="resume__contact-field">
-						<span>Name</span>
-						<input type="text" name="name" placeholder="Your name" autoComplete="name" required />
-					</label>
-					<label className="resume__contact-field">
-						<span>Email</span>
-						<input type="email" name="email" placeholder="you@gmail.com" autoComplete="email" required />
-					</label>
-					<label className="resume__contact-field resume__contact-field--message">
-						<span>Message <em>(optional)</em></span>
-						<textarea name="message" placeholder="Write your message" rows="5" />
-					</label>
-				</div>
-				<Button type="submit">Send message</Button>
-			</form>
+			<ContactForm />
 		</section>
 	);
 }

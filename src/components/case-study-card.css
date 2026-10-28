@@ -33,13 +33,19 @@
   align-items: center;
   width: max-content;
   padding: 4px var(--space-1);
-  border: 0.5px solid var(--color-foreground);
+  border: 1px solid var(--color-foreground);
   border-radius: 6px;
   font-family: var(--font-body);
   font-size: 10px;
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.case-study-card:hover .case-study-card__category,
+.case-study-card:focus-visible .case-study-card__category {
+  background: var(--color-accent);
+  color: var(--color-foreground);
 }
 
 .case-study-card__content {
@@ -77,6 +83,7 @@
   justify-self: center;
   object-fit: contain;
   display: block;
+  filter: drop-shadow(0 0 16px color-mix(in srgb, var(--color-foreground) 32%, transparent));
   transition: transform 180ms ease;
 }
 

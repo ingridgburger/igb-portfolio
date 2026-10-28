@@ -15,9 +15,34 @@
   height: 100dvh;
 }
 
+.app__home-viewport {
+  height: auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
 .app__hero-viewport .app__content {
   min-height: 0;
   display: flex;
+}
+
+.app__home-viewport .app__content {
+  min-height: calc(100vh - 72px);
+  min-height: calc(100dvh - 72px);
+  display: block;
+}
+
+.home-page {
+  width: 100%;
+  min-height: 100%;
+}
+
+.home-page .hero {
+  height: calc(100vh - 72px);
+  height: calc(100dvh - 72px);
+  min-height: calc(100vh - 72px);
+  min-height: calc(100dvh - 72px);
+  flex: none;
 }
 
 .app__case-study-viewport {

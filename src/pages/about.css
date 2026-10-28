@@ -110,6 +110,10 @@
 	margin-top: 64px;
 }
 
+.about-page > .contact-form {
+	margin-top: 64px;
+}
+
 .about-page__gallery {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1.348fr;
@@ -160,6 +164,10 @@
 
 	.about-page__work,
 	.about-page__creative {
+		margin-top: 56px;
+	}
+
+	.about-page > .contact-form {
 		margin-top: 56px;
 	}
 

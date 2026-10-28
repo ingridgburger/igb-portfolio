@@ -17,15 +17,20 @@ const HERO_IMAGE_ORDER = [
 
 export default function HeroImages() {
   const [mainIndex, setMainIndex] = useState(1);
+  const [isPaused, setIsPaused] = useState(false);
   const total = HERO_IMAGE_ORDER.length;
 
   useEffect(() => {
+    if (isPaused) {
+      return undefined;
+    }
+
     const intervalId = window.setInterval(() => {
       setMainIndex((index) => (index + 1) % total);
     }, 3000);
 
     return () => window.clearInterval(intervalId);
-  }, [total]);
+  }, [isPaused, total]);
 
   const leftIndex = (mainIndex - 1 + total) % total;
   const rightIndex = (mainIndex + 1) % total;
@@ -60,6 +65,10 @@ export default function HeroImages() {
             className={`hero-images__link hero-images__link--${role}`}
             aria-label={isCenter ? `View ${image.alt.replace(' website preview', '')} case study` : undefined}
             tabIndex={isCenter ? 0 : -1}
+            onMouseEnter={isCenter ? () => setIsPaused(true) : undefined}
+            onMouseLeave={isCenter ? () => setIsPaused(false) : undefined}
+            onFocus={isCenter ? () => setIsPaused(true) : undefined}
+            onBlur={isCenter ? () => setIsPaused(false) : undefined}
           >
             <img
               src={image.src}

@@ -37,7 +37,11 @@ export default function CaseStudyPage() {
       <SecondaryNav study={study} anchors={sectionAnchors} visible={showSecondaryNav} />
       <section className="case-study-page__opening">
         <section className="case-study-page__hero">
-          <img src={study.heroImage} alt={`${study.title} project preview`} />
+          <picture>
+            <source media="(max-width: 600px)" srcSet={study.mobileHeroImage} />
+            <source media="(max-width: 900px)" srcSet={study.tabletHeroImage || study.heroImage} />
+            <img src={study.heroImage} alt={`${study.title} project preview`} />
+          </picture>
           <Button as={Link} className="case-study-page__back-button" to="/case-studies" icon="‹">
             BACK
           </Button>

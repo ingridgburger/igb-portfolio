@@ -1,5 +1,7 @@
 import spellCover from '../assets/images/spell-cover.webp';
 import spellHero from '../assets/images/spell-case-study/spell-hero.gif';
+import spellHeroMobile from '../assets/images/spell-case-study/spell-hero-mobile.gif';
+import spellHeroTablet from '../assets/images/spell-case-study/spell-hero-tablet.gif';
 import spellLogo from '../assets/images/spell-case-study/spell-circle-dark.png';
 import spellScreens from '../assets/images/spell-case-study/spell-screens.webp';
 import spellSitemap from '../assets/images/spell-case-study/spell-sitemap.webp';
@@ -20,6 +22,8 @@ import xander from '../assets/images/spell-case-study/xander-spread.webp';
 
 import intealthCover from '../assets/images/intealth-cover.webp'
 import intealthHero from '../assets/images/intealth-case-study/intealth-hero.gif'
+import intealthHeroMobile from '../assets/images/intealth-case-study/intealth-hero-mobile.gif'
+import intealthHeroTablet from '../assets/images/intealth-case-study/intealth-hero-tablet.gif'
 import intealthLogo from '../assets/images/intealth-case-study/intealth-circle-dark.webp';
 import designCover from '../assets/images/intealth-case-study/design-cover.webp'
 import designMd from '../assets/images/intealth-case-study/figma-to-designmd.webp';
@@ -32,6 +36,8 @@ import ownerCommunity from '../assets/images/intealth-case-study/owner-community
 
 import weckerlysCover from '../assets/images/weckerlys-cover.webp';
 import weckerlysHero from '../assets/images/weckerlys-case-study/weckerlys-cover.gif';
+import weckerlysHeroMobile from '../assets/images/weckerlys-case-study/weckerlys-hero-mobile.gif';
+import weckerlysHeroTablet from '../assets/images/weckerlys-case-study/weckerlys-hero-tablet.gif';
 import weckerlysLogo from '../assets/images/weckerlys-case-study/weckerlys-logo.webp';
 import accessibilityCover from '../assets/images/weckerlys-case-study/accessibility.webp';
 import brandingCover from '../assets/images/weckerlys-case-study/branding.webp';
@@ -61,6 +67,8 @@ import googleProfileAnalytics from '../assets/images/weckerlys-case-study/google
 
 import petesCover from '../assets/images/petes-cover.webp';
 import petesHero from '../assets/images/petes-case-study/petes-hero.gif';
+import petesHeroMobile from '../assets/images/petes-case-study/petes-hero-mobile.gif';
+import petesHeroTablet from '../assets/images/petes-case-study/petes-hero-tablet.gif';
 import petesLogo from '../assets/images/petes-case-study/petes-circle-dark.webp';
 import appDemo from '../assets/images/petes-case-study/app-demo.MOV';
 import toDev from '../assets/images/petes-case-study/to-dev.webp';
@@ -73,6 +81,8 @@ import finalApplicationScreens from '../assets/images/petes-case-study/final-app
 
 import soupCover from '../assets/images/soup-cover.webp';
 import soupHero from '../assets/images/soup-case-study/soup-hero.gif';
+import soupHeroMobile from '../assets/images/soup-case-study/soup-hero-mobile.gif';
+import soupHeroTablet from '../assets/images/soup-case-study/soup-hero-tablet.gif';
 import soupLogo from '../assets/images/soup-case-study/soup-logo.webp';
 import styleEssence from '../assets/images/soup-case-study/style-essence.webp';
 import users from '../assets/images/soup-case-study/users.webp';
@@ -82,6 +92,8 @@ import soupWebDemo from '../assets/images/soup-case-study/soup-web-demo.MOV';
 
 import phpRecipeCookbookCover from '../assets/images/php-recipe-cookbook-case-study/php-recipe-cookbook-cover.webp';
 import phpRecipeCookbookHero from '../assets/images/php-recipe-cookbook-case-study/php-recipe-cookbook-hero.gif';
+import phpRecipeCookbookHeroMobile from '../assets/images/php-recipe-cookbook-case-study/php-recipe-cookbook-hero-mobile.gif';
+import phpRecipeCookbookHeroTablet from '../assets/images/php-recipe-cookbook-case-study/php-recipe-cookbook-hero-tablet.gif';
 import phpRecipeCookbookLogo from '../assets/images/php-recipe-cookbook-case-study/php-recipe-cookbook-logo.webp';
 import recipeAppDemo from '../assets/images/php-recipe-cookbook-case-study/cookbook-web-demo.mov';
 import responsiveGrid from '../assets/images/php-recipe-cookbook-case-study/responsive-grid.mov';
@@ -89,6 +101,8 @@ import mysql from '../assets/images/php-recipe-cookbook-case-study/mysql.webp'
 
 import kamiCover from '../assets/images/kami-case-study/kami-cover.webp';
 import kamiHero from '../assets/images/kami-case-study/kami-hero.gif';
+import kamiHeroMobile from '../assets/images/kami-case-study/kami-hero-mobile.gif';
+import kamiHeroTablet from '../assets/images/kami-case-study/kami-hero-tablet.gif';
 import kamiLogo from '../assets/images/kami-case-study/kami-logo.webp';
 import kamiTruckLine from '../assets/images/kami-case-study/kami-truck-line.webp';
 import kamiWindow from '../assets/images/kami-case-study/kami-window.webp';
@@ -110,6 +124,8 @@ export const caseStudies = [
     skills: ['figma', 'javascript', 'github', 'react', 'typescript', 'adobe'],
     logo: spellLogo,
     heroImage: spellHero,
+    mobileHeroImage: spellHeroMobile,
+    tabletHeroImage: spellHeroTablet,
     introImage: spellEditions,
     blocks: [
       { type: 'section-title', text: 'Introduction' },
@@ -220,6 +236,8 @@ export const caseStudies = [
     skills: ['figma', 'react', 'javascript', 'github', 'graphql', 'css', 'graphql'],
     logo: intealthLogo,
     heroImage: intealthHero,
+    mobileHeroImage: intealthHeroMobile,
+    tabletHeroImage: intealthHeroTablet,
     blocks: [
       { type: 'section-title', text: 'Introduction' },
       {
@@ -369,6 +387,8 @@ export const caseStudies = [
     skills: ['figma', 'react', 'javascript', 'github', 'php', 'html', 'css', 'graphql'],
     logo: petesLogo,
     heroImage: petesHero,
+    mobileHeroImage: petesHeroMobile,
+    tabletHeroImage: petesHeroTablet,
     blocks: [
       { type: 'section-title', text: 'Introduction' },
       { 
@@ -567,6 +587,8 @@ export const caseStudies = [
     skills: ['framer', 'adobe'],
     logo: soupLogo,
     heroImage: soupHero,
+    mobileHeroImage: soupHeroMobile,
+    tabletHeroImage: soupHeroTablet,
     blocks: [
       { type: 'section-title', text: 'Introduction' },
       {
@@ -705,6 +727,8 @@ export const caseStudies = [
     skills: ['figma', 'react', 'javascript', 'github', 'adobe', 'css', 'google'],
     logo: weckerlysLogo,
     heroImage: weckerlysHero,
+    mobileHeroImage: weckerlysHeroMobile,
+    tabletHeroImage: weckerlysHeroTablet,
     blocks: [
       { type: 'section-title', text: 'Introduction' },
       {
@@ -1200,6 +1224,8 @@ export const caseStudies = [
     skills: ['figma', 'html', 'css', 'javascript', 'php', 'mysql'],
     logo: phpRecipeCookbookLogo,
     heroImage: phpRecipeCookbookHero,
+    mobileHeroImage: phpRecipeCookbookHeroMobile,
+    tabletHeroImage: phpRecipeCookbookHeroTablet,
     blocks: [
       { type: 'section-title', text: 'Overview' },
       {
@@ -1272,6 +1298,8 @@ export const caseStudies = [
     skills: ['figma', 'javascript', 'github', 'react', 'typescript', 'adobe'],
     logo: kamiLogo,
     heroImage: kamiHero,
+    mobileHeroImage: kamiHeroMobile,
+    tabletHeroImage: kamiHeroTablet,
     blocks: [
       { type: 'section-title', text: 'Introduction'},
       { 

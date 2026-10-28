@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="app">
-      <div className={isHomePage ? 'app__hero-viewport' : isCaseStudyPage ? 'app__case-study-viewport' : undefined}>
+      <div className={isHomePage ? 'app__hero-viewport app__home-viewport' : isCaseStudyPage ? 'app__case-study-viewport' : undefined}>
         <Header />
         <main className="app__content">
           <Routes>

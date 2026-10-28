@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import HeroImages from '../components/hero-images';
 import Button from '../components/button';
+import ContactForm from '../components/contact-form';
 import './home.css';
 
 const ROLE_TITLES = ['UX / UI DESIGNER.', 'FRONT-END DEVELOPER.'];
@@ -54,6 +55,7 @@ export default function HomePage() {
 	}, [typedText, isDeleting, roleIndex]);
 
 	return (
+		<div className="home-page">
 		<section className="hero">
 			<h1 className="hero__title">
 				<span className="text-h1 hero__line">HI! I'M INGRID BURGER,</span>
@@ -74,6 +76,8 @@ export default function HomePage() {
 			<div className="hero__images">
 				<HeroImages />
 			</div>
-		</section>
+			</section>
+			<ContactForm />
+		</div>
 	);
 }
