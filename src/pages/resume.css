@@ -259,6 +259,10 @@
 }
 
 @media (max-width: 900px) {
+	.resume__card-image {
+		width: 30vw;
+	}
+
 	.resume-page {
 		padding: var(--space-3) var(--mobile-side-padding) var(--space-5);
 	}
