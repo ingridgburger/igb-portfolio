@@ -501,6 +501,10 @@
 }
 
 @media (max-width: 700px) {
+  .case-study-secondary-nav {
+    display: none;
+  }
+
   .case-study-page__main {
     padding-top: var(--space-2);
   }

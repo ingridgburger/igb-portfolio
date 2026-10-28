@@ -140,3 +140,81 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
+
+@media (hover: none) {
+  .button:hover,
+  .button--arrow:hover {
+    transform: none !important;
+    box-shadow: 0 3px 0 var(--color-foreground) !important;
+  }
+
+  .button--arrow:hover {
+    width: 180px !important;
+  }
+
+  .button--arrow:hover .button__arrow {
+    flex-basis: 0 !important;
+    width: 0 !important;
+    margin-left: 0 !important;
+    opacity: 0 !important;
+  }
+
+  .site-header__logo:hover,
+  .nav-links__item:hover,
+  .nav-links__dropdown-item:hover {
+    text-shadow: none !important;
+  }
+
+  .case-study-card:hover {
+    transform: none !important;
+    box-shadow: 0 3px 0 0 var(--color-foreground) !important;
+  }
+
+  .case-study-card:hover .case-study-card__category {
+    background: transparent !important;
+    color: var(--color-foreground) !important;
+  }
+
+  .case-study-card:hover .case-study-card__image {
+    transform: none !important;
+  }
+
+  .case-studies-page__tab:hover,
+  .visual-arts-page__tab:hover {
+    background: transparent !important;
+    color: var(--color-foreground) !important;
+  }
+
+  .case-studies-page__tab--active:hover,
+  .visual-arts-page__tab--active:hover {
+    background: var(--color-dark) !important;
+    color: var(--color-light) !important;
+  }
+
+  .case-study-page__back-button:hover {
+    transform: translate(-50%, 50%) !important;
+  }
+
+  .case-study-block__carousel-arrow:hover {
+    background: var(--color-background) !important;
+    color: var(--color-foreground) !important;
+  }
+
+  .visual-gallery__trigger:hover .visual-gallery__image {
+    transform: none !important;
+    filter: drop-shadow(0 2px 8px color-mix(in srgb, var(--color-foreground) 24%, transparent)) !important;
+  }
+
+  .back-to-top:hover {
+    transform: translateY(0) !important;
+    box-shadow: 0 3px 0 var(--color-foreground) !important;
+  }
+
+  .hero-images__link--center:hover .hero-images__item--center {
+    filter:
+      drop-shadow(var(--hero-shadow-small))
+      drop-shadow(var(--hero-shadow-medium))
+      drop-shadow(var(--hero-shadow-large))
+      drop-shadow(var(--hero-shadow-xlarge)) !important;
+  }
+}

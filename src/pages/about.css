@@ -145,6 +145,11 @@
 		font-size: 14px;
 	}
 
+	.about-page__title {
+		font-size: 20px;
+		line-height: 1.2;
+	}
+
 	.about-page__intro,
 	.about-page__work {
 		grid-template-columns: 1fr;

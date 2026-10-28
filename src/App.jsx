@@ -5,7 +5,6 @@ import ResumePage from './pages/resume';
 import CaseStudiesPage from './pages/case-studies';
 import VisualArtsPage from './pages/visual-arts';
 import AboutPage from './pages/about';
-import ViewportScrollShadow from './components/viewport-scroll-shadow';
 import BackToTop from './components/back-to-top';
 import CaseStudyPage from './pages/case-study-page';
 import { Routes, Route, useLocation } from 'react-router-dom';
@@ -41,7 +40,6 @@ function App() {
         </main>
       </div>
       <Footer />
-      <ViewportScrollShadow />
       <BackToTop />
     </div>
   );
