@@ -37,7 +37,7 @@
 .resume-page__cards {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
-	align-items: start;
+	align-items: stretch;
 	gap: var(--space-3);
 }
 
@@ -78,6 +78,10 @@
 	display: grid;
 	gap: var(--space-1);
 	padding: var(--space-2) var(--space-4);
+}
+
+.resume-page > .contact-form {
+	margin-top: var(--space-4);
 }
 
 .resume__entry-title,
