@@ -344,11 +344,6 @@ export const caseStudies = [
                   "We built the redesigned screens into a fully navigable Figma prototype so stakeholders across Intealth could experience the flows before development began. We also met with the communications and front-end web development teams to review the screens and gather feedback, then implemented changes so the designs aligned with WDOMS's transition from FAIMER and Intealth branding to its own identity.",
                 ]
               },
-              {
-                type: 'iframe',
-                src: 'https://embed.figma.com/proto/2PO9lrpm2FnGdvAgYPkVTR/Intealth-Team-Library?node-id=17825-5654&starting-point-node-id=17834%3A28128&embed-host=share',
-                title: 'Intealth Team Library Figma prototype',
-              },
               { type: 'body',
                 text: [
                   "The result is a modern foundation for WDOMS: a distinct identity for the WFME and FAIMER collaboration, updated search, record, and sponsor notes experiences, and designs reviewed by the teams who would communicate and build them.",
